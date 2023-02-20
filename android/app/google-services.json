@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "1035184227155",
+    "project_id": "avatar-shoppingmall",
+    "storage_bucket": "avatar-shoppingmall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035184227155:android:15d595c776927f31aa17a6",
+        "android_client_info": {
+          "package_name": "com.example.avatar3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035184227155-da5r010e5vgqv6kd0e76bbjk98g2586m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1ZcmdraKJmLfFzXg_B7YwUPu9WEgQf0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035184227155-da5r010e5vgqv6kd0e76bbjk98g2586m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1035184227155-8b5q3jn5s6pva1ar5hnel07shgrlic9h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.toonflix"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035184227155:android:19454a87070c9656aa17a6",
+        "android_client_info": {
+          "package_name": "com.example.toonflix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035184227155-da5r010e5vgqv6kd0e76bbjk98g2586m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1ZcmdraKJmLfFzXg_B7YwUPu9WEgQf0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035184227155-da5r010e5vgqv6kd0e76bbjk98g2586m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1035184227155-8b5q3jn5s6pva1ar5hnel07shgrlic9h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.toonflix"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035184227155:android:59ce594f0de5fe04aa17a6",
+        "android_client_info": {
+          "package_name": "jin.mychew.shopingmall_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035184227155-da5r010e5vgqv6kd0e76bbjk98g2586m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1ZcmdraKJmLfFzXg_B7YwUPu9WEgQf0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035184227155-da5r010e5vgqv6kd0e76bbjk98g2586m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1035184227155-8b5q3jn5s6pva1ar5hnel07shgrlic9h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.toonflix"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

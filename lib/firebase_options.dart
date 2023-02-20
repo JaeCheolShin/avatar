@@ -25,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -57,7 +54,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyA1ZcmdraKJmLfFzXg_B7YwUPu9WEgQf0I',
-    appId: '1:1035184227155:android:59ce594f0de5fe04aa17a6',
+    appId: '1:1035184227155:android:15d595c776927f31aa17a6',
     messagingSenderId: '1035184227155',
     projectId: 'avatar-shoppingmall',
     storageBucket: 'avatar-shoppingmall.appspot.com',
@@ -65,11 +62,21 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDJjWr3FpVbEKcZEp-EuBssKVUlPRVV6gs',
-    appId: '1:1035184227155:ios:351d9c58c51da1ffaa17a6',
+    appId: '1:1035184227155:ios:64878f7e1d867d1daa17a6',
     messagingSenderId: '1035184227155',
     projectId: 'avatar-shoppingmall',
     storageBucket: 'avatar-shoppingmall.appspot.com',
-    iosClientId: '1035184227155-beremhonmgd47lmi2km67s4i8rqqepl3.apps.googleusercontent.com',
-    iosBundleId: 'jin.mychew.shopingmallFlutter',
+    iosClientId: '1035184227155-b0har6psdlra3kul9ht92qj42omenjbn.apps.googleusercontent.com',
+    iosBundleId: 'com.example.avatar3',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyDJjWr3FpVbEKcZEp-EuBssKVUlPRVV6gs',
+    appId: '1:1035184227155:ios:64878f7e1d867d1daa17a6',
+    messagingSenderId: '1035184227155',
+    projectId: 'avatar-shoppingmall',
+    storageBucket: 'avatar-shoppingmall.appspot.com',
+    iosClientId: '1035184227155-b0har6psdlra3kul9ht92qj42omenjbn.apps.googleusercontent.com',
+    iosBundleId: 'com.example.avatar3',
   );
 }
