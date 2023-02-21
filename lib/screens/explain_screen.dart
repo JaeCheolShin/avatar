@@ -27,7 +27,7 @@ class explainscreen extends StatelessWidget {
                   Text(
                     "Tara",
                     style: TextStyle(
-                      color: Theme.of(context).textTheme.headline1!.color,
+                      color: Theme.of(context).textTheme.displayLarge!.color,
                       fontFamily: "Solway",
                       fontWeight: FontWeight.w600,
                       fontSize: 26,
@@ -39,7 +39,7 @@ class explainscreen extends StatelessWidget {
                   Text(
                     "모델과의 신체 사이즈를\n비교해보세요",
                     style: TextStyle(
-                      color: Theme.of(context).textTheme.headline1!.color,
+                      color: Theme.of(context).textTheme.displayLarge!.color,
                       fontWeight: FontWeight.w600,
                       fontSize: 30,
                     ),
@@ -59,17 +59,18 @@ class explainscreen extends StatelessWidget {
               height: 30,
             ), //계속하기 버튼 위치 얼마나 내릴지 사이즈박스 크기 숫자가 클수록 내려감
             Flexible(
-                flex: 1,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Button1(
-                      bgColor: Theme.of(context).textTheme.headline1!.color,
-                      text: "계속하기",
-                      textColor: Colors.white,
-                    )
-                  ],
-                ))
+              flex: 1,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Button1(
+                    bgColor: Theme.of(context).textTheme.displayLarge!.color,
+                    text: "계속하기",
+                    textColor: Colors.white,
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),

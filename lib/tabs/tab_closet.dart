@@ -40,7 +40,7 @@ class TabCloset extends StatelessWidget {
                         style: const TextStyle(fontSize: 20),
                       ),
                       Text(
-                        itemProvider.items[index].price.toString() + '원',
+                        '${itemProvider.items[index].price}원',
                         style: const TextStyle(fontSize: 16, color: Colors.red),
                       )
                     ],

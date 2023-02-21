@@ -8,7 +8,7 @@ class TabAvatar extends StatelessWidget {
     return Scaffold(
         body: Center(
       child: Container(
-        child: Image.asset('assets/images/AVATAR.png'),
+        child: Image.asset('assets/images/avatar-removebg.png'),
       ),
     ));
   }

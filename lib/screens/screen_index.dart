@@ -7,6 +7,8 @@ import '../tabs/tab_mypage.dart';
 import '../tabs/tab_search.dart';
 
 class IndexScreen extends StatefulWidget {
+  const IndexScreen({super.key});
+
   @override
   _IndexScreenState createState() {
     return _IndexScreenState();
@@ -18,7 +20,7 @@ class _IndexScreenState extends State<IndexScreen> {
 
   final List<Widget> tabs = [
     TabSearch(),
-    TabCloset(),
+    const TabCloset(),
     const TabAvatar(),
     TabHeart(),
     TabMyPage(),
@@ -27,7 +29,13 @@ class _IndexScreenState extends State<IndexScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 1,
+        iconTheme: const IconThemeData(
+          color: Colors.black, //색변경
+        ),
+      ),
       bottomNavigationBar: SizedBox(
         height: 80,
         child: BottomNavigationBar(
@@ -63,7 +71,7 @@ class _IndexScreenState extends State<IndexScreen> {
                 ),
                 label: ''),
             const BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart), label: 'heart'),
+                icon: Icon(Icons.heart_broken_outlined), label: 'heart'),
             const BottomNavigationBarItem(
                 icon: Icon(Icons.person), label: 'My Page'),
           ],

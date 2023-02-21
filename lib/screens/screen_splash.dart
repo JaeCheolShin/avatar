@@ -7,6 +7,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/model_cart.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() {
     return _SplashScreenState();
@@ -28,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
       if (isLogin) {
         Navigator.of(context).pushReplacementNamed('/index');
       } else {
-        Navigator.of(context).pushReplacementNamed('/explain');
+        Navigator.of(context).pushReplacementNamed('/onboarding');
       }
     });
   }

@@ -1,3 +1,4 @@
+import 'package:avatar3_flutter/screens/screen_onboarding.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -36,13 +37,14 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Shopping mall',
         routes: {
-          '/index': (context) => IndexScreen(),
+          '/index': (context) => const IndexScreen(),
           '/login': (context) => const LoginScreen(),
-          '/splash': (context) => SplashScreen(),
+          '/splash': (context) => const SplashScreen(),
           '/register': (context) => const RegisterScreen(),
           '/detail': (context) => DetailScreen(),
           '/search': (context) => const SearchScreen(),
           '/explain': (context) => const explainscreen(),
+          '/onboarding': (context) => const OnboardingScreen(),
         },
         initialRoute: '/splash',
         debugShowCheckedModeBanner: false,

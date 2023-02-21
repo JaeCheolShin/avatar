@@ -25,8 +25,20 @@ class LoginScreen extends StatelessWidget {
               height: 10,
             ),
             ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) =>
+                            const loginavatar())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
+              },
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  backgroundColor: Colors.white,
+                  side: const BorderSide(color: Colors.black)),
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.46,
+                width: MediaQuery.of(context).size.width * 0.551,
                 height: MediaQuery.of(context).size.height * 0.075,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(17),
@@ -38,7 +50,7 @@ class LoginScreen extends StatelessWidget {
                     Image.asset('assets/images/logo.png',
                         width: 50, height: 50),
                     const Text(
-                      '  AVATAR로 시작하기',
+                      '  아바타로 시작하기',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 17,
@@ -47,30 +59,30 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (_) =>
-                            loginavatar())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
-              },
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  backgroundColor: Colors.white,
-                  side: const BorderSide(color: Colors.black)),
             ),
             const SizedBox(
               height: 10,
             ),
             ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) =>
+                            IndexScreen())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
+              },
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(17)),
+                  backgroundColor: Colors.grey.shade300,
+                  side: const BorderSide(color: Colors.transparent)),
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.46,
+                width: MediaQuery.of(context).size.width * 0.551, 
                 height: MediaQuery.of(context).size.height * 0.075,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(17),
                     // color: Colors.yellow
-                    color: Colors.grey),
+                    color: Colors.grey.shade300),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -86,6 +98,11 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
               onPressed: () {
                 Navigator.push(
                     context,
@@ -96,20 +113,15 @@ class LoginScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.grey,
+                  backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.46,
+                width: MediaQuery.of(context).size.width * 0.551,
                 height: MediaQuery.of(context).size.height * 0.075,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(17),
                     // color: Colors.yellow
-                    color: Colors.grey),
+                    color: Colors.grey.shade300),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -125,6 +137,11 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
               onPressed: () {
                 Navigator.push(
                     context,
@@ -135,20 +152,15 @@ class LoginScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.grey,
+                  backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.46,
+                width: MediaQuery.of(context).size.width * 0.551,
                 height: MediaQuery.of(context).size.height * 0.075,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(17),
                     // color: Colors.yellow
-                    color: Colors.grey),
+                    color: Colors.grey.shade300),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -164,6 +176,11 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
               onPressed: () {
                 Navigator.push(
                     context,
@@ -174,20 +191,15 @@ class LoginScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.grey,
+                  backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.46,
+                width: MediaQuery.of(context).size.width * 0.551,
                 height: MediaQuery.of(context).size.height * 0.075,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(17),
                     // color: Colors.yellow
-                    color: Colors.grey),
+                    color: Colors.grey.shade300),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -203,18 +215,6 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (_) =>
-                            IndexScreen())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
-              },
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.grey,
-                  side: const BorderSide(color: Colors.transparent)),
             ),
             const SizedBox(
               height: 20,
@@ -230,6 +230,15 @@ class LoginScreen extends StatelessWidget {
               height: 10,
             ),
             OutlinedButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => IndexScreen()));
+              },
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(17)),
+                  backgroundColor: Colors.white,
+                  side: const BorderSide(color: Colors.grey, width: 0.5)),
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.4,
                 height: MediaQuery.of(context).size.height * 0.05,
@@ -249,15 +258,6 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => IndexScreen()));
-              },
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.white,
-                  side: const BorderSide(color: Colors.grey, width: 0.5)),
             ),
             /* const SizedBox(
               height: 1,
