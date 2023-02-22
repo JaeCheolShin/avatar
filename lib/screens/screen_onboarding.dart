@@ -1,3 +1,4 @@
+import 'package:avatar3_flutter/login_Page/login_avatar.dart';
 import 'package:avatar3_flutter/screens/screen_login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,7 +11,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  final int _numPages = 5; //페이지 장수
+  final int _numPages = 4; //페이지 장수
   final PageController _pageController = PageController(initialPage: 0);
   int _currentPage = 0;
 
@@ -26,11 +27,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 150),
       margin: const EdgeInsets.symmetric(horizontal: 8.0),
-      height: 8.0,
+      height: 9.0,
       width: isActive ? 20.0 : 8.0,
       decoration: BoxDecoration(
-        color:
-            isActive ? Colors.pink.shade200 : const Color(0xFF7B51D3), //점들 색깔
+        color: isActive
+            ? const Color.fromARGB(255, 122, 82, 210)
+            : Colors.grey.shade500, //점들 색깔
         borderRadius: const BorderRadius.all(Radius.circular(12)),
       ),
     );
@@ -44,25 +46,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         child: Container(
           color: Colors.transparent,
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 40.0),
+            padding: const EdgeInsets.symmetric(vertical: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Container(
-                  alignment: Alignment.centerRight,
-                  child: ElevatedButton(
-                    onPressed: () => print('Skip'),
-                    child: const Text(
-                      'Skip',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20.0,
-                      ),
-                    ),
-                  ),
-                ),
                 SizedBox(
-                  height: 600.0,
+                  height: 702.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
                   child: PageView(
                     physics: const ClampingScrollPhysics(),
                     controller: _pageController,
@@ -77,40 +66,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            const Center(
-                              child: Image(
-                                image: AssetImage(
-                                  'assets/images/logo.png',
-                                ),
-                                height: 190.0,
-                                width: 190.0,
-                              ),
-                            ),
-                            const SizedBox(height: 250.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(
-                                child: Image(
-                                  image: AssetImage(
-                                    'assets/images/from avatar removebg.png',
-                                  ),
-                                  height: 50.0,
-                                  width: 200.0,
+                                child: Text(
+                                  'STEP 1. 검색후, 찜하기',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w700),
                                 ),
                               ),
                             ),
-                            /*SizedBox(height: 15.0),
-                            Text(
-                              '하파타카차자아사바마라다나가',
-                            ),*/
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(40.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
+                            const SizedBox(height: 20.0),
                             const Center(
                               child: Image(
                                 image: AssetImage(
@@ -120,22 +87,65 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 width: 500.0,
                               ),
                             ),
-                            const SizedBox(height: 70.0),
+                            const SizedBox(height: 30.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(
-                                child: Text(
-                                  '스타일요소(옷이나 악세사리, 헤어스타일 같은 요소들) 검색한다음, 찜합니다',
-                                  style: TextStyle(
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.w500),
+                                child: Text('스타일요소(옷, 악세서리, 헤어스타일)를',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500),
+                                    textAlign: TextAlign.center),
+                              ),
+                            ),
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                              child: const Center(
+                                child: Text('검색한다음, 찜합니다',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500),
+                                    textAlign: TextAlign.center),
+                              ),
+                            ),
+                            const SizedBox(height: 25.0),
+                            ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) =>
+                                            const loginavatar())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
+                              },
+                              style: ElevatedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10)),
+                                  backgroundColor: Colors.white,
+                                  side: const BorderSide(color: Colors.black)),
+                              child: Container(
+                                width: MediaQuery.of(context).size.width * 0.5,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.04,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(17),
+                                    // color: Colors.yellow
+                                    color: Colors.white),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset('assets/images/logo.png',
+                                        width: 50, height: 50),
+                                    const Text(
+                                      '  아바타로 시작하기',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w600),
+                                    )
+                                  ],
                                 ),
                               ),
                             ),
-                            /*SizedBox(height: 15.0),
-                            Text(
-                              '하파타카차자아사바마라다나가',
-                            ),*/
                           ],
                         ),
                       ),
@@ -144,6 +154,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                              child: const Center(
+                                child: Text(
+                                  'STEP 2. 엣지패널 확인',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 20.0),
                             const Center(
                               child: Image(
                                 image: AssetImage(
@@ -153,22 +175,29 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 width: 500.0,
                               ),
                             ),
-                            const SizedBox(height: 70.0),
+                            const SizedBox(height: 30.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(
                                 child: Text(
-                                  '마음에 드는 스타일 요소들을 찜한다음) 엣지패널에 가져다두고!',
+                                  '마음에 드는 스타일 요소들을 찜한다음',
                                   style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.w500),
                                 ),
                               ),
                             ),
-                            /*SizedBox(height: 15.0),
-                            Text(
-                              '하파타카차자아사바마라다나가',
-                            ),*/
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                              child: const Center(
+                                child: Text(
+                                  '엣지패널에 가져다두고!',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -177,6 +206,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                              child: const Center(
+                                child: Text(
+                                  'STEP 3. 아바타 만들기',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 20.0),
                             const Center(
                               child: Image(
                                 image: AssetImage(
@@ -186,22 +227,29 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 width: 500.0,
                               ),
                             ),
-                            const SizedBox(height: 70.0),
+                            const SizedBox(height: 30.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(
                                 child: Text(
-                                  '본인의 얼굴과 신체사진을 업로드 해서 아바타를 만들고,  ',
+                                  '본인의 얼굴과 신체사진을 업로드 해서',
                                   style: TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 20,
                                       fontWeight: FontWeight.w500),
                                 ),
                               ),
                             ),
-                            /*SizedBox(height: 15.0),
-                            Text(
-                              '하파타카차자아사바마라다나가',
-                            ),*/
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                              child: const Center(
+                                child: Text(
+                                  '아바타를 만들고,',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -210,6 +258,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                              child: const Center(
+                                child: Text(
+                                  'STEP 4.Darg & Drop',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 20.0),
                             const Center(
                               child: Image(
                                 image: AssetImage(
@@ -219,22 +279,27 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 width: 500.0,
                               ),
                             ),
-                            const SizedBox(height: 70.0),
+                            const SizedBox(height: 30.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(
-                                child: Text(
-                                  '엣지패널에서 Darg & Drop 하면 나만의 아바타 스타일링 완성!! ',
-                                  style: TextStyle(
-                                      fontSize: 17,
-                                      fontWeight: FontWeight.w500),
-                                ),
+                                child: Text('엣지패널에서 Darg & Drop 하면',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500),
+                                    textAlign: TextAlign.center),
                               ),
                             ),
-                            /*SizedBox(height: 15.0),
-                            Text(
-                              '하파타카차자아사바마라다나가',
-                            ),*/
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                              child: const Center(
+                                child: Text('나만의 아바타 스타일링 완성!!',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500),
+                                    textAlign: TextAlign.center),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -245,42 +310,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: _buildPageIndicator(),
                 ),
-                _currentPage != _numPages - 1
-                    ? Expanded(
-                        child: Align(
-                          alignment: FractionalOffset.bottomRight,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              _pageController.nextPage(
-                                duration: const Duration(milliseconds: 500),
-                                curve: Curves.ease,
-                              );
-                            },
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              mainAxisSize: MainAxisSize.min,
-                              children: const <Widget>[
-                                Text(
-                                  'Next',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 22.0,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Icon(
-                                  Icons.arrow_forward,
-                                  color: Colors.white,
-                                  size: 30.0,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      )
-                    : const Text(''),
               ],
             ),
           ),
@@ -298,12 +327,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               style: ElevatedButton.styleFrom(
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.zero),
-                  backgroundColor: Colors.grey.shade200,
+                  backgroundColor: Colors.grey.shade400,
                   side: const BorderSide(color: Colors.transparent)),
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width * 1,
                 height: MediaQuery.of(context).size.height * 0.08,
-                decoration: BoxDecoration(color: Colors.grey.shade200),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
