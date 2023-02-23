@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 
 import 'firebase_options.dart';
 import 'models/model_cart.dart';
-import 'screens/explain_screen.dart';
 import 'screens/screen_search.dart';
 import 'models/model_auth.dart';
 import 'models/model_item_provider.dart';
@@ -43,7 +42,6 @@ class MyApp extends StatelessWidget {
           '/register': (context) => const RegisterScreen(),
           '/detail': (context) => DetailScreen(),
           '/search': (context) => const SearchScreen(),
-          '/explain': (context) => const explainscreen(),
           '/onboarding': (context) => const OnboardingScreen(),
         },
         initialRoute: '/splash',

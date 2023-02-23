@@ -1,4 +1,4 @@
-import 'package:avatar3_flutter/screens/screen_createavatar.dart';
+import 'package:avatar3_flutter/screens/screen_bodyguide.dart';
 import 'package:flutter/material.dart';
 
 class TabAvatar extends StatelessWidget {
@@ -38,7 +38,7 @@ class TabAvatar extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (_) =>
-                          const CreateAvatar())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
+                          const BodyGuideView())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
             },
             style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(

@@ -66,8 +66,7 @@ class SearchScreen extends StatelessWidget {
                               style: const TextStyle(fontSize: 20),
                             ),
                             Text(
-                              itemProvider.searchItem[index].price.toString() +
-                                  '원',
+                              '${itemProvider.searchItem[index].price}원',
                               style: const TextStyle(
                                   fontSize: 16, color: Colors.red),
                             )
