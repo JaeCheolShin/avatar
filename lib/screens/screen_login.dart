@@ -40,10 +40,7 @@ class LoginScreen extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.551,
                 height: MediaQuery.of(context).size.height * 0.075,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(17),
-                    // color: Colors.yellow
-                    color: Colors.white),
+                decoration: const BoxDecoration(color: Colors.white),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -76,13 +73,9 @@ class LoginScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(17)),
                   backgroundColor: Colors.grey.shade400,
                   side: const BorderSide(color: Colors.transparent)),
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.551,
                 height: MediaQuery.of(context).size.height * 0.075,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(17),
-                  // color: Colors.yellow
-                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -115,13 +108,9 @@ class LoginScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(17)),
                   backgroundColor: Colors.grey.shade400,
                   side: const BorderSide(color: Colors.transparent)),
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.551,
                 height: MediaQuery.of(context).size.height * 0.075,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(17),
-                  // color: Colors.yellow
-                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -154,13 +143,9 @@ class LoginScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(17)),
                   backgroundColor: Colors.grey.shade400,
                   side: const BorderSide(color: Colors.transparent)),
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.551,
                 height: MediaQuery.of(context).size.height * 0.075,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(17),
-                  // color: Colors.yellow
-                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -193,13 +178,9 @@ class LoginScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(17)),
                   backgroundColor: Colors.grey.shade400,
                   side: const BorderSide(color: Colors.transparent)),
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.551,
                 height: MediaQuery.of(context).size.height * 0.075,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(17),
-                  // color: Colors.yellow
-                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

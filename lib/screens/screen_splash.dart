@@ -48,7 +48,9 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
         appBar: null,
         body: Center(
-          child: Image.asset('assets/images/nuggi225.png'),
+          child: Image.asset(
+            'assets/images/from avatar removebg.png',
+          ),
         ));
   }
 }
