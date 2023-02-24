@@ -1,10 +1,9 @@
+import 'package:avatar3_flutter/tab/tab_avatar.dart';
+import 'package:avatar3_flutter/tab/tab_closet.dart';
+import 'package:avatar3_flutter/tab/tab_heart.dart';
+import 'package:avatar3_flutter/tab/tab_mypage.dart';
+import 'package:avatar3_flutter/tab/tab_search.dart';
 import 'package:flutter/material.dart';
-
-import '../tabs/tab_avatar.dart';
-import '../tabs/tab_closet.dart';
-import '../tabs/tab_heart.dart';
-import '../tabs/tab_mypage.dart';
-import '../tabs/tab_search.dart';
 
 class IndexScreen extends StatefulWidget {
   const IndexScreen({super.key});
@@ -23,7 +22,7 @@ class _IndexScreenState extends State<IndexScreen> {
     const TabCloset(),
     const TabAvatar(),
     TabHeart(),
-    TabMyPage(),
+    const TabMyPage(),
   ];
 
   @override

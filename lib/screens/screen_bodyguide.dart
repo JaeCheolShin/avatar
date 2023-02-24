@@ -1,4 +1,4 @@
-import 'package:avatar3_flutter/tabs/tab_avatar.dart';
+import 'package:avatar3_flutter/tab/tab_avatar.dart';
 import 'package:flutter/material.dart';
 
 class BodyGuideView extends StatefulWidget {
@@ -49,7 +49,7 @@ class _GuildViewState extends State<BodyGuideView> {
             right: 0,
             height: 80,
             child: Container(
-              color: Colors.white,
+              color: Colors.transparent,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List<Widget>.generate(
