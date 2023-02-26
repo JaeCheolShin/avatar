@@ -30,7 +30,7 @@ class TabAvatar extends StatelessWidget {
             width: 600.0,
           ),
         ),
-        const SizedBox(height: 40.0),
+        const SizedBox(height: 20.0),
         Center(
           child: ElevatedButton(
             onPressed: () {
@@ -47,7 +47,7 @@ class TabAvatar extends StatelessWidget {
                 side: const BorderSide(color: Colors.transparent)),
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.4,
-              height: MediaQuery.of(context).size.height * 0.03,
+              height: MediaQuery.of(context).size.height * 0.055,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [

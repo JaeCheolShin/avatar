@@ -52,6 +52,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Container(
                   alignment: Alignment.centerRight,
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        backgroundColor: Colors.black,
+                        side:
+                            const BorderSide(color: Colors.black)), //skip버튼 배경색
                     onPressed: () {
                       Navigator.push(
                           context,
@@ -62,14 +68,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: const Text(
                       'Skip',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.white, //skip버튼 폰트색
                         fontSize: 17.0,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 720.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
+                  height: 680.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
                   child: PageView(
                     physics: const ClampingScrollPhysics(),
                     controller: _pageController,
@@ -105,7 +111,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 width: 600.0,
                               ),
                             ),
-                            const SizedBox(height: 30.0),
+                            const SizedBox(height: 10.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(
@@ -146,7 +152,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 width: 600.0,
                               ),
                             ),
-                            const SizedBox(height: 20.0),
+                            const SizedBox(height: 10.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(
@@ -187,7 +193,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 width: 600.0,
                               ),
                             ),
-                            const SizedBox(height: 30.0),
+                            const SizedBox(height: 10.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                               child: const Center(
@@ -228,7 +234,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 width: 600.0,
                               ),
                             ),
-                            const SizedBox(height: 20.0),
+                            const SizedBox(height: 10.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(
@@ -255,6 +261,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: Align(
                           alignment: FractionalOffset.bottomRight,
                           child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                backgroundColor: Colors.black, //skip버튼 배경색
+                                side: const BorderSide(color: Colors.black)),
                             onPressed: () {
                               _pageController.nextPage(
                                 duration: const Duration(milliseconds: 500),
@@ -268,15 +279,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 Text(
                                   'Next',
                                   style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 22.0,
-                                  ),
+                                      color: Colors.white,
+                                      fontSize: 22.0,
+                                      fontWeight: FontWeight.w400),
                                 ),
                                 SizedBox(width: 10.0),
                                 Icon(
                                   Icons.arrow_forward,
                                   color: Colors.white,
-                                  size: 30.0,
+                                  size: 33.0,
                                 ),
                               ],
                             ),
@@ -301,8 +312,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               style: ElevatedButton.styleFrom(
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.zero),
-                  backgroundColor: Colors.grey.shade400,
-                  side: const BorderSide(color: Colors.transparent)),
+                  backgroundColor: Colors.black,
+                  side: const BorderSide(color: Colors.black)), //로그인하기 배경색
               child: SizedBox(
                 width: MediaQuery.of(context).size.width * 1,
                 height: MediaQuery.of(context).size.height * 0.065,

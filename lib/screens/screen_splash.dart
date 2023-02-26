@@ -1,56 +1,76 @@
 import 'dart:async';
 
+import 'package:avatar3_flutter/screens/screen_onboarding.dart';
+import 'package:avatar3_flutter/setting/db.dart';
+import 'package:avatar3_flutter/setting/spaceer.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../models/model_cart.dart';
-
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
-  _SplashScreenState createState() {
-    return _SplashScreenState();
-  }
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  Future<bool> checkLogin() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    final cartProvider = Provider.of<CartProvider>(context, listen: false);
-    bool isLogin = prefs.getBool('isLogin') ?? false;
-    String uid = prefs.getString('uid') ?? '';
-    cartProvider.fetchCartItemsOrCreate(uid);
-    return isLogin;
-  }
-
-  void moveScreen() async {
-    await checkLogin().then((isLogin) {
-      if (isLogin) {
-        Navigator.of(context).pushReplacementNamed('/index');
+  Widget build(BuildContext context) {
+    Future.delayed(const Duration(milliseconds: 1400), () async {
+      final SharedPreferences db = await prefs;
+      var userId = db.getString("uid");
+      if (userId != null) {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const OnboardingScreen()));
       } else {
-        Navigator.of(context).pushReplacementNamed('/onboarding');
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (context) =>
+                const OnboardingScreen())); //나중에 indexscreen으로 바꾸기
       }
     });
-  }
 
-  @override
-  void initState() {
-    super.initState();
-    Timer(const Duration(milliseconds: 2000), () {
-      moveScreen();
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-        appBar: null,
-        body: Center(
-          child: Image.asset(
-            'assets/images/from avatar removebg.png',
-          ),
-        ));
+      body: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(child: Container()),
+            GestureDetector(
+              onTap: () {},
+              child: const Image(
+                  height: 100,
+                  width: 100,
+                  image: AssetImage("assets/images/logo.png")),
+            ),
+            const Expanded(child: SizedBox()),
+            Column(
+              children: [
+                const Text(
+                  textAlign: TextAlign.center,
+                  "From",
+                  style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 15,
+                      fontFamily: 'avatar1'),
+                ),
+                const Text(
+                  textAlign: TextAlign.center,
+                  "A v a t ar",
+                  style: TextStyle(color: Colors.black54, fontSize: 24),
+                ),
+                const VerticalSpacer(height: 30),
+                Container(
+                  height: 4,
+                  width: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.3),
+                      borderRadius: BorderRadius.circular(4)),
+                ),
+                const VerticalSpacer(height: 20)
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

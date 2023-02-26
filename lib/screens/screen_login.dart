@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../login_Page/login_avatar.dart';
 import 'screen_index.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -18,11 +17,11 @@ class LoginScreen extends StatelessWidget {
             const Spacer(),
             Image.asset(
               'assets/images/logo.png',
-              height: 250,
-              width: 250,
+              height: 200,
+              width: 200,
             ),
             const SizedBox(
-              height: 10,
+              height: 50,
             ),
             ElevatedButton(
               onPressed: () {
@@ -30,26 +29,25 @@ class LoginScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (_) =>
-                            const loginavatar())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
+                            const IndexScreen())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
               },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  backgroundColor: Colors.white,
-                  side: const BorderSide(color: Colors.black)),
-              child: Container(
+                      borderRadius: BorderRadius.circular(17)),
+                  backgroundColor: Colors.grey.shade300,
+                  side: const BorderSide(color: Colors.transparent)),
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.551,
                 height: MediaQuery.of(context).size.height * 0.075,
-                decoration: const BoxDecoration(color: Colors.white),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Image.asset('assets/images/logo.png',
                         width: 50, height: 50),
                     const Text(
-                      '  아바타로 시작하기',
+                      'AVATAR로 시작하기',
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 17,
                           fontWeight: FontWeight.w600),
                     )
@@ -71,7 +69,7 @@ class LoginScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.grey.shade400,
+                  backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.551,
@@ -141,7 +139,7 @@ class LoginScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.grey.shade400,
+                  backgroundColor: Colors.grey.shade500,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.551,
@@ -176,7 +174,7 @@ class LoginScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.grey.shade400,
+                  backgroundColor: Colors.grey.shade600,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.551,

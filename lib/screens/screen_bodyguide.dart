@@ -1,4 +1,4 @@
-import 'package:avatar3_flutter/tab/tab_avatar.dart';
+import 'package:avatar3_flutter/screens/screen_selcet_image.dart';
 import 'package:flutter/material.dart';
 
 class BodyGuideView extends StatefulWidget {
@@ -164,10 +164,36 @@ class PageFour extends StatelessWidget {
             '직접 촬영하시거나, 갤러리에서 사진을 가져옵니다.',
           ),
           ElevatedButton(
-            onPressed: () async {
-              TabAvatar;
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (_) =>
+                          const SelectImagepage())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
             },
-            child: const Text("돌아가기"),
+            style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(17)),
+                backgroundColor: Colors.grey.shade500,
+                side: const BorderSide(color: Colors.transparent)),
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width * 0.5,
+              height: MediaQuery.of(context).size.height * 0.05,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  //Image.asset('assets/images/apple1.png',
+                  //width: 40, height: 40),
+                  Text(
+                    '아바타 만들러 가기',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600),
+                  )
+                ],
+              ),
+            ),
           ),
         ],
       ),

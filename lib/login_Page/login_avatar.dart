@@ -123,8 +123,7 @@ class LoginButton extends StatelessWidget {
               ScaffoldMessenger.of(context)
                 ..hideCurrentSnackBar()
                 ..showSnackBar(SnackBar(
-                    content:
-                        Text('welcome! ' + authClient.user!.email! + ' ')));
+                    content: Text('welcome! ${authClient.user!.email!} ')));
               Navigator.pushReplacementNamed(context, '/index');
             } else {
               ScaffoldMessenger.of(context)
