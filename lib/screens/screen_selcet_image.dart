@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:avatar3_flutter/screens/screen_bodyguide.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -21,7 +22,7 @@ class _SelectImagePageState extends State<SelectImagepage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('아바타 만들기'),
+          title: const Text('가이드 보기'),
         ),
         body: Column(
           children: [
@@ -61,6 +62,41 @@ class _SelectImagePageState extends State<SelectImagepage> {
                   ),
                 ),
               ),
+            const Expanded(
+                child: SizedBox(
+              height: 50,
+            )),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) =>
+                            const BodyGuideView())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
+              },
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  backgroundColor: Colors.black,
+                  side: const BorderSide(color: Colors.transparent)),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.4,
+                height: MediaQuery.of(context).size.height * 0.055,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    // Image.asset('assets/images/kakao1.png', width: 40, height: 40), 이미지 삽입시 //지우기
+                    Text(
+                      '아바타 만들기',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 17,
+                          fontWeight: FontWeight.w600),
+                    )
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),

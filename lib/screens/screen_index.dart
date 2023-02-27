@@ -22,7 +22,7 @@ class _IndexScreenState extends State<IndexScreen> {
     const TabCloset(),
     const TabAvatar(),
     TabHeart(),
-    const TabMyPage(),
+    const TabMypage(),
   ];
 
   @override
@@ -70,7 +70,7 @@ class _IndexScreenState extends State<IndexScreen> {
                 ),
                 label: ''),
             const BottomNavigationBarItem(
-                icon: Icon(Icons.heart_broken_outlined), label: 'heart'),
+                icon: Icon(Icons.favorite_border), label: 'heart'),
             const BottomNavigationBarItem(
                 icon: Icon(Icons.person), label: 'My Page'),
           ],

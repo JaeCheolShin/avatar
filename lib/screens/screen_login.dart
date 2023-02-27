@@ -1,3 +1,4 @@
+import 'package:avatar3_flutter/login_page/login_apple.dart';
 import 'package:flutter/material.dart';
 
 import 'screen_index.dart';
@@ -29,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (_) =>
-                            const IndexScreen())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
+                            const loginavatar())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
               },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(

@@ -1,4 +1,3 @@
-import 'package:avatar3_flutter/screens/screen_selcet_image.dart';
 import 'package:flutter/material.dart';
 
 class BodyGuideView extends StatefulWidget {
@@ -21,7 +20,6 @@ class _GuildViewState extends State<BodyGuideView> {
     const PageOne(),
     const PageTwo(),
     const PageThree(),
-    const PageFour()
   ];
 
   @override
@@ -141,61 +139,11 @@ class PageThree extends StatelessWidget {
           children: [
             Image.asset('assets/images/logo.png'),
             const Text(
-              '가이드에 맞추어 서면 3초 후 자동 촬영됩니다.',
+              '직접 촬영하시거나, 갤러리에서 사진을 가져옵니다.',
               style: TextStyle(color: Colors.black54, fontSize: 15),
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class PageFour extends StatelessWidget {
-  const PageFour({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            '직접 촬영하시거나, 갤러리에서 사진을 가져옵니다.',
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (_) =>
-                          const SelectImagepage())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
-            },
-            style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(17)),
-                backgroundColor: Colors.grey.shade500,
-                side: const BorderSide(color: Colors.transparent)),
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.5,
-              height: MediaQuery.of(context).size.height * 0.05,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  //Image.asset('assets/images/apple1.png',
-                  //width: 40, height: 40),
-                  Text(
-                    '아바타 만들러 가기',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 17,
-                        fontWeight: FontWeight.w600),
-                  )
-                ],
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }
