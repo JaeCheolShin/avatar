@@ -30,7 +30,7 @@ class TabAvatar extends StatelessWidget {
             width: 600.0,
           ),
         ),
-        const SizedBox(height: 20.0),
+        const SizedBox(height: 50.0),
         Center(
           child: ElevatedButton(
             onPressed: () {

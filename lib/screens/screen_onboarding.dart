@@ -45,7 +45,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         child: Container(
           color: Colors.transparent,
           child: Padding(
-            padding: const EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.only(top: 40),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
@@ -75,7 +75,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 680.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
+                  height: 750.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
                   child: PageView(
                     physics: const ClampingScrollPhysics(),
                     controller: _pageController,
@@ -107,8 +107,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 image: AssetImage(
                                   'assets/images/onboarding1.png',
                                 ),
-                                height: 500.0,
-                                width: 600.0,
+                                height: 582.0,
+                                width: 700.0,
                               ),
                             ),
                             const SizedBox(height: 10.0),
@@ -148,7 +148,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 image: AssetImage(
                                   'assets/images/onboarding2.png',
                                 ),
-                                height: 500.0,
+                                height: 582.0,
                                 width: 600.0,
                               ),
                             ),
@@ -189,7 +189,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 image: AssetImage(
                                   'assets/images/onboarding3.png',
                                 ),
-                                height: 500.0,
+                                height: 582.0,
                                 width: 600.0,
                               ),
                             ),
@@ -230,7 +230,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 image: AssetImage(
                                   'assets/images/onboarding4.png',
                                 ),
-                                height: 500.0,
+                                height: 582.0,
                                 width: 600.0,
                               ),
                             ),
@@ -259,12 +259,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 _currentPage != _numPages - 1
                     ? Expanded(
                         child: Align(
-                          alignment: FractionalOffset.bottomRight,
+                          alignment: FractionalOffset.centerRight,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10)),
-                                backgroundColor: Colors.black, //skip버튼 배경색
+                                backgroundColor: Colors.black, //next버튼 배경색
                                 side: const BorderSide(color: Colors.black)),
                             onPressed: () {
                               _pageController.nextPage(

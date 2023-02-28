@@ -42,22 +42,22 @@ class SplashScreen extends StatelessWidget {
             ),
             const Expanded(child: SizedBox()),
             Column(
-              children: const [
+              children: [
                 Text(
                   textAlign: TextAlign.center,
                   "From",
                   style: TextStyle(
-                      color: Colors.black54,
+                      color: Colors.grey.shade300,
                       fontSize: 15,
                       fontFamily: 'avatar1'),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Text(
                   textAlign: TextAlign.center,
                   "A V A T A R",
-                  style: TextStyle(color: Colors.black54, fontSize: 24),
+                  style: TextStyle(color: Colors.pink.shade200, fontSize: 24),
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
               ],
             )
           ],

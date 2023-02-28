@@ -1,4 +1,4 @@
-import 'package:avatar3_flutter/login_page/login_apple.dart';
+import 'package:avatar3_flutter/login_page/login_avatar.dart';
 import 'package:flutter/material.dart';
 
 import 'screen_index.dart';
@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                   backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.551,
+                width: MediaQuery.of(context).size.width * 0.47,
                 height: MediaQuery.of(context).size.height * 0.075,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -48,8 +48,8 @@ class LoginScreen extends StatelessWidget {
                     const Text(
                       'AVATAR로 시작하기',
                       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
+                          color: Colors.black,
+                          fontSize: 20,
                           fontWeight: FontWeight.w600),
                     )
                   ],
@@ -73,7 +73,7 @@ class LoginScreen extends StatelessWidget {
                   backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.551,
+                width: MediaQuery.of(context).size.width * 0.47,
                 height: MediaQuery.of(context).size.height * 0.075,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -84,7 +84,7 @@ class LoginScreen extends StatelessWidget {
                       '네이버로 시작하기',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 17,
+                          fontSize: 20,
                           fontWeight: FontWeight.w600),
                     )
                   ],
@@ -105,10 +105,10 @@ class LoginScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.grey.shade400,
+                  backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.551,
+                width: MediaQuery.of(context).size.width * 0.47,
                 height: MediaQuery.of(context).size.height * 0.075,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -119,7 +119,7 @@ class LoginScreen extends StatelessWidget {
                       '카카오로 시작하기',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 17,
+                          fontSize: 20,
                           fontWeight: FontWeight.w600),
                     )
                   ],
@@ -140,10 +140,10 @@ class LoginScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.grey.shade500,
+                  backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.551,
+                width: MediaQuery.of(context).size.width * 0.47,
                 height: MediaQuery.of(context).size.height * 0.075,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -153,8 +153,8 @@ class LoginScreen extends StatelessWidget {
                     const Text(
                       '애플로 시작하기',
                       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
+                          color: Colors.black,
+                          fontSize: 20,
                           fontWeight: FontWeight.w600),
                     )
                   ],
@@ -175,10 +175,10 @@ class LoginScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.grey.shade600,
+                  backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.551,
+                width: MediaQuery.of(context).size.width * 0.47,
                 height: MediaQuery.of(context).size.height * 0.075,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -188,8 +188,8 @@ class LoginScreen extends StatelessWidget {
                     const Text(
                       '구글로 시작하기',
                       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
+                          color: Colors.black,
+                          fontSize: 20,
                           fontWeight: FontWeight.w600),
                     )
                   ],

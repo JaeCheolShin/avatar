@@ -11,7 +11,9 @@ class loginavatar extends StatelessWidget {
     return ChangeNotifierProvider(
         create: (_) => LoginModel(),
         child: Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            backgroundColor: Colors.black,
+          ),
           body: Column(
             children: [
               Container(
@@ -26,7 +28,7 @@ class loginavatar extends StatelessWidget {
                 style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500),
               ),
               const SizedBox(
-                height: 30,
+                height: 100,
               ),
               const EmailInput(),
               const PasswordInput(),
@@ -111,10 +113,10 @@ class LoginButton extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.05,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30.0),
-          ),
-        ),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(17)),
+            backgroundColor: Colors.black,
+            side: const BorderSide(color: Colors.transparent)),
         onPressed: () async {
           await authClient
               .loginWithEmail(login.email, login.password)
@@ -132,7 +134,10 @@ class LoginButton extends StatelessWidget {
             }
           });
         },
-        child: const Text('Login'),
+        child: const Text(
+          'Login',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
     );
   }
@@ -149,6 +154,7 @@ class RegisterButton extends StatelessWidget {
         },
         child: const Text(
           '회원가입',
+          style: TextStyle(color: Colors.black),
         ));
   }
 }
@@ -164,6 +170,7 @@ class Find_Id extends StatelessWidget {
         },
         child: const Text(
           'ID 찾기',
+          style: TextStyle(color: Colors.black),
         ));
   }
 }
@@ -179,6 +186,7 @@ class Find_Password extends StatelessWidget {
         },
         child: const Text(
           'Password 찾기',
+          style: TextStyle(color: Colors.black),
         ));
   }
 }
