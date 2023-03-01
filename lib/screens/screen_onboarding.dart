@@ -24,9 +24,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   Widget _indicator(bool isActive) {
     return AnimatedContainer(
-      duration: const Duration(milliseconds: 150),
+      duration: const Duration(milliseconds: 300),
       margin: const EdgeInsets.symmetric(horizontal: 8.0),
-      height: 9.0,
+      height: 7.0,
       width: isActive ? 20.0 : 8.0,
       decoration: BoxDecoration(
         color: isActive
@@ -45,12 +45,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         child: Container(
           color: Colors.transparent,
           child: Padding(
-            padding: const EdgeInsets.only(top: 40),
+            padding: const EdgeInsets.only(top: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Container(
-                  alignment: Alignment.centerRight,
+                  alignment: Alignment.bottomRight,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -75,7 +75,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 750.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
+                  height: 680.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
                   child: PageView(
                     physics: const ClampingScrollPhysics(),
                     controller: _pageController,
@@ -104,11 +104,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             const SizedBox(height: 20.0),
                             const Center(
                               child: Image(
-                                image: AssetImage(
-                                  'assets/images/onboarding1.png',
-                                ),
-                                height: 582.0,
+                                image:
+                                    AssetImage('assets/images/onboarding1.png'),
+                                height: 500.0,
                                 width: 700.0,
+                                fit: BoxFit.fitWidth,
                               ),
                             ),
                             const SizedBox(height: 10.0),
@@ -148,8 +148,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 image: AssetImage(
                                   'assets/images/onboarding2.png',
                                 ),
-                                height: 582.0,
-                                width: 600.0,
+                                height: 500.0,
+                                width: 700.0,
+                                fit: BoxFit.fitWidth,
                               ),
                             ),
                             const SizedBox(height: 10.0),
@@ -189,8 +190,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 image: AssetImage(
                                   'assets/images/onboarding3.png',
                                 ),
-                                height: 582.0,
-                                width: 600.0,
+                                height: 500.0,
+                                width: 700.0,
+                                fit: BoxFit.fitWidth,
                               ),
                             ),
                             const SizedBox(height: 10.0),
@@ -230,8 +232,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 image: AssetImage(
                                   'assets/images/onboarding4.png',
                                 ),
-                                height: 582.0,
-                                width: 600.0,
+                                height: 500.0,
+                                width: 700.0,
+                                fit: BoxFit.fitWidth,
                               ),
                             ),
                             const SizedBox(height: 10.0),
@@ -316,14 +319,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   side: const BorderSide(color: Colors.black)), //로그인하기 배경색
               child: SizedBox(
                 width: MediaQuery.of(context).size.width * 1,
-                height: MediaQuery.of(context).size.height * 0.065,
+                height: MediaQuery.of(context).size.height * 0.058,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset('assets/images/logo.png',
                         width: 50, height: 50),
                     const Text(
-                      '  로그인하기',
+                      '로그인하기',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 17,

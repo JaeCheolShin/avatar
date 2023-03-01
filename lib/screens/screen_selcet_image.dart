@@ -20,6 +20,7 @@ class _SelectImagePageState extends State<SelectImagepage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.black,
           title: const Text('아바타 만들기'),
         ),
         body: Column(
@@ -37,43 +38,12 @@ class _SelectImagePageState extends State<SelectImagepage> {
                   onTap: () {
                     _showBottomSheet();
                   },
-                  child: const Center(
-                    child: Icon(
-                      Icons.add_box_outlined,
-                      size: 200,
-                    ),
-                  ),
-                ),
-              )
-            else
-              Center(
-                child: Container(
-                  width: imageSize,
-                  height: imageSize,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                        width: 2, color: Theme.of(context).colorScheme.primary),
-                  ),
-                ),
-              ),
-            const SizedBox(
-              height: 20,
-            ),
-            if (_pickedFile == null)
-              Container(
-                constraints: BoxConstraints(
-                  minHeight: imageSize,
-                  minWidth: imageSize,
-                ),
-                child: GestureDetector(
-                  onTap: () {
-                    _showBottomSheet();
-                  },
-                  child: const Center(
-                    child: Icon(
-                      Icons.add_box_outlined,
-                      size: 200,
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/avatar removebg.png',
+                      width: 500,
+                      height: 500,
+                      fit: BoxFit.fill,
                     ),
                   ),
                 ),
@@ -107,7 +77,7 @@ class _SelectImagePageState extends State<SelectImagepage> {
                   backgroundColor: Colors.black,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.4,
+                width: MediaQuery.of(context).size.width * 0.5,
                 height: MediaQuery.of(context).size.height * 0.048,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -147,6 +117,11 @@ class _SelectImagePageState extends State<SelectImagepage> {
             ),
             ElevatedButton(
               onPressed: () => _getCameraImage(),
+              style: ElevatedButton.styleFrom(
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero),
+                  backgroundColor: Colors.black,
+                  side: const BorderSide(color: Colors.transparent)),
               child: const Text('직접 촬영'),
             ),
             const SizedBox(
@@ -160,6 +135,11 @@ class _SelectImagePageState extends State<SelectImagepage> {
             ),
             ElevatedButton(
               onPressed: () => _getPhotoLibraryImage(),
+              style: ElevatedButton.styleFrom(
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero),
+                  backgroundColor: Colors.black,
+                  side: const BorderSide(color: Colors.transparent)),
               child: const Text('갤러리에서 선택'),
             ),
             const SizedBox(

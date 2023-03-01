@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:avatar3_flutter/screens/screen_onboarding.dart';
+import 'package:avatar3_flutter/setting/color.dart';
 import 'package:avatar3_flutter/setting/db.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -42,22 +43,20 @@ class SplashScreen extends StatelessWidget {
             ),
             const Expanded(child: SizedBox()),
             Column(
-              children: [
+              children: const [
                 Text(
                   textAlign: TextAlign.center,
                   "From",
                   style: TextStyle(
-                      color: Colors.grey.shade300,
-                      fontSize: 15,
-                      fontFamily: 'avatar1'),
+                      color: Colors.black, fontSize: 15, fontFamily: 'avatar1'),
                 ),
-                const SizedBox(height: 15),
+                SizedBox(height: 15),
                 Text(
                   textAlign: TextAlign.center,
                   "A V A T A R",
-                  style: TextStyle(color: Colors.pink.shade200, fontSize: 24),
+                  style: TextStyle(color: Colors.black, fontSize: 24),
                 ),
-                const SizedBox(height: 50),
+                SizedBox(height: 50),
               ],
             )
           ],

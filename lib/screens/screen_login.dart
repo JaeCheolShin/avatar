@@ -36,9 +36,9 @@ class LoginScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17)),
                   backgroundColor: Colors.grey.shade300,
-                  side: const BorderSide(color: Colors.transparent)),
+                  side: const BorderSide(color: Colors.black)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.47,
+                width: MediaQuery.of(context).size.width * 0.51,
                 height: MediaQuery.of(context).size.height * 0.075,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                       'AVATAR로 시작하기',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20,
+                          fontSize: 17,
                           fontWeight: FontWeight.w600),
                     )
                   ],
@@ -73,7 +73,7 @@ class LoginScreen extends StatelessWidget {
                   backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.47,
+                width: MediaQuery.of(context).size.width * 0.51,
                 height: MediaQuery.of(context).size.height * 0.075,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -83,8 +83,8 @@ class LoginScreen extends StatelessWidget {
                     const Text(
                       '네이버로 시작하기',
                       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
+                          color: Colors.black,
+                          fontSize: 17,
                           fontWeight: FontWeight.w600),
                     )
                   ],
@@ -108,7 +108,7 @@ class LoginScreen extends StatelessWidget {
                   backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.47,
+                width: MediaQuery.of(context).size.width * 0.51,
                 height: MediaQuery.of(context).size.height * 0.075,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -118,8 +118,8 @@ class LoginScreen extends StatelessWidget {
                     const Text(
                       '카카오로 시작하기',
                       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
+                          color: Colors.black,
+                          fontSize: 17,
                           fontWeight: FontWeight.w600),
                     )
                   ],
@@ -143,7 +143,7 @@ class LoginScreen extends StatelessWidget {
                   backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.47,
+                width: MediaQuery.of(context).size.width * 0.51,
                 height: MediaQuery.of(context).size.height * 0.075,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -154,7 +154,7 @@ class LoginScreen extends StatelessWidget {
                       '애플로 시작하기',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20,
+                          fontSize: 17,
                           fontWeight: FontWeight.w600),
                     )
                   ],
@@ -178,7 +178,7 @@ class LoginScreen extends StatelessWidget {
                   backgroundColor: Colors.grey.shade300,
                   side: const BorderSide(color: Colors.transparent)),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.47,
+                width: MediaQuery.of(context).size.width * 0.51,
                 height: MediaQuery.of(context).size.height * 0.075,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -189,7 +189,7 @@ class LoginScreen extends StatelessWidget {
                       '구글로 시작하기',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20,
+                          fontSize: 17,
                           fontWeight: FontWeight.w600),
                     )
                   ],
@@ -227,11 +227,11 @@ class LoginScreen extends StatelessWidget {
                     color: Colors.white),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       '체험하기',
                       style: TextStyle(
-                          color: Colors.grey.shade500,
+                          color: Colors.black,
                           fontSize: 20,
                           fontWeight: FontWeight.w500),
                     )

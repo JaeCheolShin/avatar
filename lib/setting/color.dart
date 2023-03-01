@@ -27,6 +27,7 @@ const orange = Color(0xFFf5ba92);
 const sky = Color(0xFFABDEE6);
 const blue = Color(0xFF509BE4);
 const grey = Color.fromARGB(255, 95, 109, 123);
+const black = Color(0x002648ff);
 
 const listColors = [
   green,
@@ -39,4 +40,5 @@ const listColors = [
   blue,
   pink,
   yellow,
+  black,
 ];
