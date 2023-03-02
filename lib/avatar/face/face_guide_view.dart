@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class BodyGuideView extends StatefulWidget {
-  const BodyGuideView({Key? key}) : super(key: key);
+import '../../setting/color.dart';
+
+
+
+
+class FaceGuideView extends StatefulWidget {
+  const FaceGuideView({Key? key}) : super(key: key);
 
   @override
-  State<BodyGuideView> createState() => _GuildViewState();
+  State<FaceGuideView> createState() => _GuildViewState();
 }
 
-class _GuildViewState extends State<BodyGuideView> {
+class _GuildViewState extends State<FaceGuideView> {
   // declare and initizlize the page controller
   final PageController _pageController = PageController(initialPage: 0);
 
@@ -20,6 +26,7 @@ class _GuildViewState extends State<BodyGuideView> {
     const PageOne(),
     const PageTwo(),
     const PageThree(),
+    const PageFour()
   ];
 
   @override
@@ -47,29 +54,29 @@ class _GuildViewState extends State<BodyGuideView> {
             right: 0,
             height: 80,
             child: Container(
-              color: Colors.transparent,
+              color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List<Widget>.generate(
                     _pages.length,
-                    (index) => Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
-                          child: InkWell(
-                            onTap: () {
-                              _pageController.animateToPage(index,
-                                  duration: const Duration(milliseconds: 300),
-                                  curve: Curves.easeIn);
-                            },
-                            child: CircleAvatar(
-                              radius: 6,
-                              // check if a dot is connected to the current page
-                              // if true, give it a different color
-                              backgroundColor: _activePage == index
-                                  ? Colors.black
-                                  : Colors.grey,
-                            ),
-                          ),
-                        )),
+                        (index) => Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: InkWell(
+                        onTap: () {
+                          _pageController.animateToPage(index,
+                              duration: const Duration(milliseconds: 300),
+                              curve: Curves.easeIn);
+                        },
+                        child: CircleAvatar(
+                          radius: 6,
+                          // check if a dot is connected to the current page
+                          // if true, give it a different color
+                          backgroundColor: _activePage == index
+                              ? mainColor
+                              : Colors.black54,
+                        ),
+                      ),
+                    )),
               ),
             ),
           ),
@@ -88,14 +95,18 @@ class PageOne extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             SizedBox(
               width: 200,
               child: Text(
                 '주의 : 정확한 측정을 위해서 타이트한 옷과 머리를 묶어 몸매가 드러날 수 있게 해주세요. 옷 색상이 배경 및 물건과 겹치지 않도록 확인해주세요.',
-                style: TextStyle(color: Colors.black54, fontSize: 15),
+                style: TextStyle(
+                    color: Colors.black54,
+                    fontSize: 15
+                ),
               ),
             ),
+
           ],
         ),
       ),
@@ -112,14 +123,14 @@ class PageTwo extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            SizedBox(
-              width: 200,
-              child: Text(
-                '스마트폰을 바닥에 놓고 80도 가이드에 맞추어 벽에 기대어 세웁니다.',
-                style: TextStyle(color: Colors.black54, fontSize: 15),
+          children: [
+            Text(
+              '스마트폰을 바닥에 놓고 80도 가이드에 맞추어 벽에 기대어 세웁니다.',
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 15
               ),
-            ),
+            )
           ],
         ),
       ),
@@ -138,12 +149,40 @@ class PageThree extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('assets/images/logo.png'),
-            const Text(
-              '직접 촬영하시거나, 갤러리에서 사진을 가져옵니다.',
-              style: TextStyle(color: Colors.black54, fontSize: 15),
+            Text(
+              '가이드에 맞추어 서면 3초 후 자동 촬영됩니다.',
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 15
+              ),
             ),
+
           ],
         ),
+      ),
+    );
+  }
+}
+
+class PageFour extends StatelessWidget {
+  const PageFour({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            '가이드에 맞추어 서면 3초 후 자동 촬영됩니다.',
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              Get.back();
+            },
+            child: Text("돌아가기"),
+          ),
+        ],
       ),
     );
   }

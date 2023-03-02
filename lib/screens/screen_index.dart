@@ -20,7 +20,7 @@ class _IndexScreenState extends State<IndexScreen> {
   final List<Widget> tabs = [
     TabSearch(),
     const TabCloset(),
-    const TabAvatar(),
+    TabAvatar(),
     TabHeart(),
     const TabMypage(),
   ];
@@ -28,13 +28,6 @@ class _IndexScreenState extends State<IndexScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 1,
-        iconTheme: const IconThemeData(
-          color: Colors.black, //색변경
-        ),
-      ),
       bottomNavigationBar: SizedBox(
         height: 80,
         child: BottomNavigationBar(

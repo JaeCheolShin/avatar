@@ -11,6 +11,7 @@ class loginavatar extends StatelessWidget {
     return ChangeNotifierProvider(
         create: (_) => LoginModel(),
         child: Scaffold(
+          resizeToAvoidBottomInset: false, //키보드 올라왔을대 overflow가 되지 않도록 하는 주석
           appBar: AppBar(
             backgroundColor: Colors.black,
           ),
@@ -75,6 +76,10 @@ class EmailInput extends StatelessWidget {
     );
   }
 }
+
+/*onTap: () {
+        FocusManager.instance.primaryFocus?.unfocus(); // 키보드 닫기 이벤트 나중에 끼워 맞추기
+      },*/
 
 class PasswordInput extends StatelessWidget {
   const PasswordInput({super.key});
