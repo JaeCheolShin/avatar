@@ -13,4 +13,4 @@ class LoginModel extends ChangeNotifier {
     this.password = password;
     notifyListeners();
   }
-}
+} 

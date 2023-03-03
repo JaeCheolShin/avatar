@@ -1,56 +1,132 @@
-import 'package:avatar3_flutter/models/model_item_provider.dart';
+import 'package:avatar3_flutter/closet/closet_Accessories.dart';
+import 'package:avatar3_flutter/closet/closet_Bottom.dart';
+import 'package:avatar3_flutter/closet/closet_Outer.dart';
+import 'package:avatar3_flutter/closet/closet_Hair.dart';
+import 'package:avatar3_flutter/closet/closet_Shoes.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-class TabCloset extends StatelessWidget {
-  const TabCloset({super.key});
+class TabCloset extends StatefulWidget {
+  const TabCloset({Key? key}) : super(key: key);
 
   @override
+  _GridviewState createState() => _GridviewState();
+}
+
+class _GridviewState extends State<TabCloset> {
+  @override
   Widget build(BuildContext context) {
-    final itemProvider = Provider.of<ItemProvider>(context);
-    return FutureBuilder(
-      future: itemProvider.fetchItems(),
-      builder: (context, snapshots) {
-        if (itemProvider.items.isEmpty) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        } else {
-          return GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 1 / 1.5,
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.black,
+            title: const Text('목록'),
+          ),
+          body: GridView.count(crossAxisCount: 2, children: <Widget>[
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HairScreen()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/naver1.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
             ),
-            itemCount: itemProvider.items.length,
-            itemBuilder: (context, index) {
-              return GridTile(
-                  child: InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, '/detail',
-                      arguments: itemProvider.items[index]);
-                },
-                child: Container(
-                  padding: const EdgeInsets.all(10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(itemProvider.items[index].imageUrl),
-                      Text(
-                        itemProvider.items[index].title,
-                        style: const TextStyle(fontSize: 20),
-                      ),
-                      Text(
-                        '${itemProvider.items[index].price}원',
-                        style: const TextStyle(fontSize: 16, color: Colors.red),
-                      )
-                    ],
-                  ),
-                ),
-              ));
-            },
-          );
-        }
-      },
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HairScreen()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AccessoriesScreen()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const OuterScreen()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const BottomScreen()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ShoesScreen()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+          ])),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

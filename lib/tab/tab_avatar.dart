@@ -41,9 +41,9 @@ class _TabAvatarPageState extends State<TabAvatar> {
                   child: Center(
                     child: Image.asset(
                       'assets/images/avatar removebg.png',
-                      width: 550,
+                      width: 600,
                       height: 550,
-                      fit: BoxFit.fill,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),
