@@ -10,7 +10,7 @@ class BodyGuideView extends StatefulWidget {
 }
 
 class _BodyGuideViewScreenState extends State<BodyGuideView> {
-  final int _numPages = 4; //페이지 장수
+  final int _numPages = 3; //페이지 장수
   final PageController _pageController = PageController(initialPage: 0);
   int _currentPage = 0;
 
@@ -117,53 +117,42 @@ class _BodyGuideViewScreenState extends State<BodyGuideView> {
                                 ),
                               ),
                             ),
+                            ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) =>
+                                            const TabAvatar())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
+                              },
+                              style: ElevatedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(17)),
+                                  backgroundColor: Colors.white,
+                                  side: const BorderSide(color: Colors.black)),
+                              child: SizedBox(
+                                width: MediaQuery.of(context).size.width * 0.51,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.075,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    /*Image.asset('assets/images/logo.png',
+                                          width: 50, height: 50),*/
+                                    Text(
+                                      '아바타 생성하기',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w600),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(40.0),
-                        child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (_) =>
-                                              const TabAvatar())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
-                                },
-                                style: ElevatedButton.styleFrom(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(17)),
-                                    backgroundColor: Colors.grey.shade300,
-                                    side: const BorderSide(
-                                        color: Colors.transparent)),
-                                child: SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.51,
-                                  height: MediaQuery.of(context).size.height *
-                                      0.075,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Image.asset('assets/images/logo.png',
-                                          width: 50, height: 50),
-                                      const Text(
-                                        '아바타 생성하기',
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.w600),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ]),
-                      )
                     ],
                   ),
                 ),

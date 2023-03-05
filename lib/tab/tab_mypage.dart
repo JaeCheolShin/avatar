@@ -1,4 +1,10 @@
 import 'package:avatar3_flutter/models/model_auth.dart';
+import 'package:avatar3_flutter/mypage/mypage_FAQ.dart';
+import 'package:avatar3_flutter/mypage/mypage_buylist.dart';
+import 'package:avatar3_flutter/mypage/mypage_notice.dart';
+import 'package:avatar3_flutter/mypage/mypage_refund.dart';
+import 'package:avatar3_flutter/mypage/mypage_setting.dart';
+import 'package:avatar3_flutter/mypage/mypage_update.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -76,37 +82,67 @@ class _AccountPageState extends State<TabMypage> {
               title: "구매 내역",
               leadingIcon: Icons.local_mall_outlined,
               leadingIconColor: blue,
-              onTap: () {}),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Buylist()),
+                );
+              }),
           const SizedBox(height: 10),
           SettingItem(
               title: "환불 내역",
               leadingIcon: Icons.favorite,
               leadingIconColor: red,
-              onTap: () {}),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Refund()),
+                );
+              }),
           const SizedBox(height: 10),
           SettingItem(
               title: "업데이트",
               leadingIcon: Icons.dark_mode_outlined,
               leadingIconColor: purple,
-              onTap: () {}),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Update()),
+                );
+              }),
           const SizedBox(height: 10),
           SettingItem(
               title: "설정",
               leadingIcon: Icons.notifications_outlined,
               leadingIconColor: orange,
-              onTap: () {}),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Setting()),
+                );
+              }),
           const SizedBox(height: 10),
           SettingItem(
               title: "FAQ",
               leadingIcon: Icons.privacy_tip_outlined,
               leadingIconColor: green,
-              onTap: () {}),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FAQ()),
+                );
+              }),
           const SizedBox(height: 10),
           SettingItem(
               title: "공지사항",
               leadingIcon: Icons.info,
               leadingIconColor: grey,
-              onTap: () {}),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Notice()),
+                );
+              }),
           const SizedBox(height: 10),
           SettingItem(
             title: "로그아웃",

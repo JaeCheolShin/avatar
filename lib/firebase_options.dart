@@ -66,7 +66,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1035184227155',
     projectId: 'avatar-shoppingmall',
     storageBucket: 'avatar-shoppingmall.appspot.com',
-    iosClientId: '1035184227155-b0har6psdlra3kul9ht92qj42omenjbn.apps.googleusercontent.com',
+    iosClientId:
+        '1035184227155-b0har6psdlra3kul9ht92qj42omenjbn.apps.googleusercontent.com',
     iosBundleId: 'com.example.avatar3',
   );
 
@@ -76,7 +77,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1035184227155',
     projectId: 'avatar-shoppingmall',
     storageBucket: 'avatar-shoppingmall.appspot.com',
-    iosClientId: '1035184227155-b0har6psdlra3kul9ht92qj42omenjbn.apps.googleusercontent.com',
+    iosClientId:
+        '1035184227155-b0har6psdlra3kul9ht92qj42omenjbn.apps.googleusercontent.com',
     iosBundleId: 'com.example.avatar3',
   );
 }

@@ -35,7 +35,7 @@ class _GridviewState extends State<TabCloset> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
-                    'assets/images/naver1.png',
+                    'assets/images/logo.png',
                     fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
                   )),
             ),

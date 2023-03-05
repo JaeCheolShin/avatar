@@ -1,53 +1,210 @@
-import 'package:avatar3_flutter/models/model_cart.dart';
+import 'package:avatar3_flutter/Heart/heart_1.dart';
+import 'package:avatar3_flutter/Heart/heart_10.dart';
+import 'package:avatar3_flutter/Heart/heart_2.dart';
+import 'package:avatar3_flutter/Heart/heart_3.dart';
+import 'package:avatar3_flutter/Heart/heart_4.dart';
+import 'package:avatar3_flutter/Heart/heart_5.dart';
+import 'package:avatar3_flutter/Heart/heart_6.dart';
+import 'package:avatar3_flutter/Heart/heart_7.dart';
+import 'package:avatar3_flutter/Heart/heart_8.dart';
+import 'package:avatar3_flutter/Heart/heart_9.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-class TabHeart extends StatelessWidget {
-  late String uid = '';
-
-  TabHeart({super.key});
-
-  Future<void> getUid() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    uid = prefs.getString('uid') ?? '';
-  }
+class TabHeart extends StatefulWidget {
+  const TabHeart({Key? key}) : super(key: key);
 
   @override
+  _HeartGridviewState createState() => _HeartGridviewState();
+}
+
+class _HeartGridviewState extends State<TabHeart> {
+  @override
   Widget build(BuildContext context) {
-    final cartProvider = Provider.of<CartProvider>(context);
-    getUid();
-    return FutureBuilder(
-      future: cartProvider.fetchCartItemsOrCreate(uid),
-      builder: (context, snapshot) {
-        if (cartProvider.cartItems.isEmpty) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        } else {
-          return ListView.builder(
-            itemCount: cartProvider.cartItems.length,
-            itemBuilder: (context, index) {
-              return ListTile(
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.black,
+            title: const Text('찜한 코디'),
+          ),
+          body: GridView.count(crossAxisCount: 2, children: <Widget>[
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Heart1()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Heart2()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Heart3()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Heart4()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Heart5()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Heart6()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Heart7()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Heart8()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Heart9()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  )),
+            ),
+            GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/detail',
-                      arguments: cartProvider.cartItems[index]);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Heart10()),
+                  );
                 },
-                title: Text(cartProvider.cartItems[index].title),
-                subtitle: Text(cartProvider.cartItems[index].price.toString()),
-                leading: Image.network(cartProvider.cartItems[index].imageUrl),
-                trailing: InkWell(
-                  onTap: () {
-                    cartProvider.removeCartItem(
-                        uid, cartProvider.cartItems[index]);
-                  },
-                  child: const Icon(Icons.delete),
-                ),
-              );
-            },
-          );
-        }
-      },
+                child: Container(
+                  color: Colors.grey.shade400,
+                  width: 100,
+                  height: 100,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Container(
+                      alignment: Alignment.bottomLeft,
+                      color: Colors.grey.shade400,
+                      width: 100,
+                      height: 100,
+                      margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                      child: Image.asset(
+                        'assets/images/logo.png',
+                        fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                      )),
+                )),
+          ])),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

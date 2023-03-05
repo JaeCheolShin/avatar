@@ -45,12 +45,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         child: Container(
           color: Colors.transparent,
           child: Padding(
-            padding: const EdgeInsets.only(top: 30),
+            padding: const EdgeInsets.only(top: 25),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Container(
-                  alignment: Alignment.bottomRight,
+                  alignment: Alignment.topRight,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -75,7 +75,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 680.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
+                  height: 650.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
                   child: PageView(
                     physics: const ClampingScrollPhysics(),
                     controller: _pageController,
@@ -86,7 +86,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     },
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.all(40.0),
+                        padding: const EdgeInsets.all(0.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
@@ -111,7 +111,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 fit: BoxFit.fitWidth,
                               ),
                             ),
-                            const SizedBox(height: 10.0),
+                            const SizedBox(height: 30.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(
@@ -127,7 +127,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(40.0),
+                        padding: const EdgeInsets.all(0.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
@@ -153,7 +153,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 fit: BoxFit.fitWidth,
                               ),
                             ),
-                            const SizedBox(height: 10.0),
+                            const SizedBox(height: 30.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(
@@ -169,7 +169,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(40.0),
+                        padding: const EdgeInsets.all(0.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
@@ -195,7 +195,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 fit: BoxFit.fitWidth,
                               ),
                             ),
-                            const SizedBox(height: 10.0),
+                            const SizedBox(height: 30.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                               child: const Center(
@@ -211,7 +211,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(40.0),
+                        padding: const EdgeInsets.all(0.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
@@ -237,7 +237,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 fit: BoxFit.fitWidth,
                               ),
                             ),
-                            const SizedBox(height: 10.0),
+                            const SizedBox(height: 30.0),
                             Container(
                               margin: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                               child: const Center(

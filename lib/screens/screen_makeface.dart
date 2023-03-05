@@ -2,14 +2,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-class MakeBody extends StatefulWidget {
-  const MakeBody({Key? key}) : super(key: key);
+class MakeFace extends StatefulWidget {
+  const MakeFace({Key? key}) : super(key: key);
 
   @override
-  State<MakeBody> createState() => _MakeBodyPageState();
+  State<MakeFace> createState() => _MakeFacePageState();
 }
 
-class _MakeBodyPageState extends State<MakeBody> {
+class _MakeFacePageState extends State<MakeFace> {
   XFile? _pickedFile;
 
   @override
