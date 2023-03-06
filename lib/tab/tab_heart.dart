@@ -1,4 +1,3 @@
-import 'package:avatar3_flutter/Heart/heart_1.dart';
 import 'package:avatar3_flutter/Heart/heart_10.dart';
 import 'package:avatar3_flutter/Heart/heart_2.dart';
 import 'package:avatar3_flutter/Heart/heart_3.dart';
@@ -8,6 +7,7 @@ import 'package:avatar3_flutter/Heart/heart_6.dart';
 import 'package:avatar3_flutter/Heart/heart_7.dart';
 import 'package:avatar3_flutter/Heart/heart_8.dart';
 import 'package:avatar3_flutter/Heart/heart_9.dart';
+import 'package:avatar3_flutter/avatar/123.dart';
 import 'package:flutter/material.dart';
 
 class TabHeart extends StatefulWidget {
@@ -31,7 +31,7 @@ class _HeartGridviewState extends State<TabHeart> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Heart1()),
+                  MaterialPageRoute(builder: (context) => const one()),
                 );
               },
               child: Container(

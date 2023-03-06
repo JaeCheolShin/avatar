@@ -31,12 +31,28 @@ class _GridviewState extends State<TabCloset> {
               },
               child: Container(
                   color: Colors.grey.shade400,
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/hair.png',
+                        height: 80,
+                        width: 80,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        '헤어',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      )
+                    ],
                   )),
             ),
             GestureDetector(
@@ -48,12 +64,35 @@ class _GridviewState extends State<TabCloset> {
               },
               child: Container(
                   color: Colors.grey.shade400,
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/accessorie.png',
+                        height: 80,
+                        width: 80,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        '모자/안경',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      const Text(
+                        '악세서리',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      )
+                    ],
                   )),
             ),
             GestureDetector(
@@ -66,12 +105,28 @@ class _GridviewState extends State<TabCloset> {
               },
               child: Container(
                   color: Colors.grey.shade400,
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/outer.png',
+                        height: 80,
+                        width: 80,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        '아우터',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      )
+                    ],
                   )),
             ),
             GestureDetector(
@@ -83,12 +138,28 @@ class _GridviewState extends State<TabCloset> {
               },
               child: Container(
                   color: Colors.grey.shade400,
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/top.png',
+                        height: 80,
+                        width: 80,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        '상의',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      )
+                    ],
                   )),
             ),
             GestureDetector(
@@ -100,12 +171,28 @@ class _GridviewState extends State<TabCloset> {
               },
               child: Container(
                   color: Colors.grey.shade400,
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/pants.png',
+                        height: 80,
+                        width: 80,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        '하의',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      )
+                    ],
                   )),
             ),
             GestureDetector(
@@ -117,12 +204,28 @@ class _GridviewState extends State<TabCloset> {
               },
               child: Container(
                   color: Colors.grey.shade400,
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/shoes.png',
+                        height: 80,
+                        width: 80,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        '신발',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      )
+                    ],
                   )),
             ),
           ])),

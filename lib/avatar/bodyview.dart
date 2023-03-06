@@ -133,7 +133,7 @@ class BodyViewScreenState extends State<BodyView> {
               "다음",
               style: TextStyle(fontSize: 20),
             )),
-      ],*/
+      ],*/ 
     );
   }
 
