@@ -115,7 +115,7 @@ class FaceViewScreenState extends State<FaceView> {
                   fit: BoxFit.cover,
                 ),
               )
-            : Image.asset('assets/images/logo.png'),
+            : const FlutterLogo(),
       ),
     );
   }
@@ -124,16 +124,16 @@ class FaceViewScreenState extends State<FaceView> {
     return AppBar(
       backgroundColor: Colors.black,
       iconTheme: const IconThemeData(color: Colors.white),
-      title: const Text("얼굴 이미지 업로드"),
+      title: const Text("아바타 만들기"),
       centerTitle: true,
-      /*  actions: [
+      actions: [
         TextButton(
             onPressed: () {},
             child: const Text(
               "다음",
               style: TextStyle(fontSize: 20),
             )),
-      ],*/
+      ],
     );
   }
 

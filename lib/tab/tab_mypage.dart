@@ -1,8 +1,9 @@
+import 'package:avatar3_flutter/avatar/%ED%94%84%EB%A1%9C%ED%95%84%20%EC%9E%84%EC%8B%9C1.dart';
+
 import 'package:avatar3_flutter/models/model_auth.dart';
 import 'package:avatar3_flutter/mypage/mypage_FAQ.dart';
 import 'package:avatar3_flutter/mypage/mypage_buylist.dart';
 import 'package:avatar3_flutter/mypage/mypage_notice.dart';
-import 'package:avatar3_flutter/mypage/mypage_refund.dart';
 import 'package:avatar3_flutter/mypage/mypage_setting.dart';
 import 'package:avatar3_flutter/mypage/mypage_update.dart';
 import 'package:flutter/cupertino.dart';
@@ -49,10 +50,10 @@ class _AccountPageState extends State<TabMypage> {
           Container(
             child: Column(
               children: <Widget>[
-                Image.asset(
-                  "assets/images/onebin.jpg", //추후에 profile["name"]!, 로 교체 물론 profile의 image도 바꿔야한다.
-                  width: 80,
+                Container(
+                  color: Colors.black,
                   height: 80,
+                  width: 80,
                 ),
                 const SizedBox(
                   height: 12,
@@ -79,6 +80,18 @@ class _AccountPageState extends State<TabMypage> {
           ),
           const SizedBox(height: 30),
           SettingItem(
+              title: "프로필 관리",
+              leadingIcon: Icons.tag_faces,
+              leadingIconColor: blue,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProfileScreen()),
+                );
+              }),
+          const SizedBox(height: 10),
+          SettingItem(
               title: "구매 내역",
               leadingIcon: Icons.local_mall_outlined,
               leadingIconColor: blue,
@@ -86,17 +99,6 @@ class _AccountPageState extends State<TabMypage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Buylist()),
-                );
-              }),
-          const SizedBox(height: 10),
-          SettingItem(
-              title: "환불 내역",
-              leadingIcon: Icons.favorite,
-              leadingIconColor: red,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Refund()),
                 );
               }),
           const SizedBox(height: 10),

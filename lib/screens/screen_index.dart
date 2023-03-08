@@ -20,8 +20,8 @@ class _IndexScreenState extends State<IndexScreen> {
   final List<Widget> tabs = [
     TabSearch(),
     const TabCloset(),
-    TabAvatar(),
-    TabHeart(),
+    const TabAvatar(),
+    const TabHeart(),
     const TabMypage(),
   ];
 

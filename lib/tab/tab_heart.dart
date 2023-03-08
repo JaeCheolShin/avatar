@@ -1,6 +1,4 @@
 import 'package:avatar3_flutter/Heart/heart_10.dart';
-import 'package:avatar3_flutter/Heart/heart_2.dart';
-import 'package:avatar3_flutter/Heart/heart_3.dart';
 import 'package:avatar3_flutter/Heart/heart_4.dart';
 import 'package:avatar3_flutter/Heart/heart_5.dart';
 import 'package:avatar3_flutter/Heart/heart_6.dart';
@@ -8,6 +6,8 @@ import 'package:avatar3_flutter/Heart/heart_7.dart';
 import 'package:avatar3_flutter/Heart/heart_8.dart';
 import 'package:avatar3_flutter/Heart/heart_9.dart';
 import 'package:avatar3_flutter/avatar/123.dart';
+import 'package:avatar3_flutter/avatar/12345.dart';
+import 'package:avatar3_flutter/mypage/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class TabHeart extends StatefulWidget {
@@ -40,15 +40,16 @@ class _HeartGridviewState extends State<TabHeart> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                    'assets/images/1.png',
+                    height: 90,
+                    width: 80,
                   )),
             ),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Heart2()),
+                  MaterialPageRoute(builder: (context) => const ProfilePage()),
                 );
               },
               child: Container(
@@ -57,15 +58,17 @@ class _HeartGridviewState extends State<TabHeart> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                    'assets/images/2.png',
+                    height: 90,
+                    width: 80,
                   )),
             ),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Heart3()),
+                  MaterialPageRoute(
+                      builder: (context) => const CameraExample()),
                 );
               },
               child: Container(
@@ -74,8 +77,9 @@ class _HeartGridviewState extends State<TabHeart> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                    'assets/images/3.png',
+                    height: 90,
+                    width: 80,
                   )),
             ),
             GestureDetector(
@@ -91,8 +95,9 @@ class _HeartGridviewState extends State<TabHeart> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                    'assets/images/4.png',
+                    height: 90,
+                    width: 80,
                   )),
             ),
             GestureDetector(
@@ -108,8 +113,9 @@ class _HeartGridviewState extends State<TabHeart> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                    'assets/images/5.png',
+                    height: 90,
+                    width: 80,
                   )),
             ),
             GestureDetector(
@@ -125,8 +131,9 @@ class _HeartGridviewState extends State<TabHeart> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                    'assets/images/6.png',
+                    height: 90,
+                    width: 80,
                   )),
             ),
             GestureDetector(
@@ -143,7 +150,8 @@ class _HeartGridviewState extends State<TabHeart> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
                     'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                    height: 90,
+                    width: 80,
                   )),
             ),
             GestureDetector(
@@ -160,7 +168,8 @@ class _HeartGridviewState extends State<TabHeart> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
                     'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                    height: 90,
+                    width: 80,
                   )),
             ),
             GestureDetector(
@@ -177,7 +186,8 @@ class _HeartGridviewState extends State<TabHeart> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
                     'assets/images/logo.png',
-                    fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                    height: 90,
+                    width: 80,
                   )),
             ),
             GestureDetector(
@@ -193,14 +203,14 @@ class _HeartGridviewState extends State<TabHeart> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Container(
-                      alignment: Alignment.bottomLeft,
                       color: Colors.grey.shade400,
                       width: 100,
                       height: 100,
                       margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                       child: Image.asset(
                         'assets/images/logo.png',
-                        fit: BoxFit.contain, //해상도 문제는 나중에 고화질 사진으로 바꿔주면 됨.
+                        height: 90,
+                        width: 80,
                       )),
                 )),
           ])),
