@@ -6,14 +6,12 @@ import 'package:avatar3_flutter/mypage/mypage_buylist.dart';
 import 'package:avatar3_flutter/mypage/mypage_notice.dart';
 import 'package:avatar3_flutter/mypage/mypage_setting.dart';
 import 'package:avatar3_flutter/mypage/mypage_update.dart';
-import 'package:avatar3_flutter/mypage/profile_edit_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../models/button1.dart';
 import '../setting/color.dart';
-import '../setting/profile_widget.dart';
 import '../setting/setting_item.dart';
 import '../setting/user.dart';
 import '../setting/user_preferences.dart';
@@ -38,16 +36,7 @@ class _AccountPageState extends State<TabMypage> {
       backgroundColor: appBgColor,
       body: ListView(
         physics: const BouncingScrollPhysics(),
-        children: [
-          ProfileWidget(
-            imagePath: user.imagePath,
-            onClicked: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => const EditProfilePage()),
-              );
-            },
-          ),
+        children: <Widget>[
           const SizedBox(height: 24),
           buildName(user),
           const SizedBox(height: 24),

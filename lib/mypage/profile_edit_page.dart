@@ -34,19 +34,19 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 ),
                 const SizedBox(height: 24),
                 TextFieldWidget(
-                  label: 'Full Name',
+                  label: '이름',
                   text: user.name,
                   onChanged: (name) {},
                 ),
                 const SizedBox(height: 24),
                 TextFieldWidget(
-                  label: 'Email',
+                  label: '이메일',
                   text: user.email,
                   onChanged: (email) {},
                 ),
                 const SizedBox(height: 24),
                 TextFieldWidget(
-                  label: 'About',
+                  label: '내 소개',
                   text: user.about,
                   maxLines: 5,
                   onChanged: (about) {},

@@ -1,3 +1,4 @@
+import 'package:avatar3_flutter/mypage/profile_edit_page.dart';
 import 'package:flutter/material.dart';
 
 import '../models/button1.dart';
@@ -5,7 +6,6 @@ import '../setting/numbers_widget.dart';
 import '../setting/profile_widget.dart';
 import '../setting/user.dart';
 import '../setting/user_preferences.dart';
-import 'edit_profile_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
