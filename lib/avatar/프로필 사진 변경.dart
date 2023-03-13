@@ -4,14 +4,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-class cameraexample extends StatefulWidget {
-  const cameraexample({Key? key}) : super(key: key);
+class qqww extends StatefulWidget {
+  const qqww({Key? key}) : super(key: key);
 
   @override
-  State<cameraexample> createState() => _cameraexamplePageState();
+  State<qqww> createState() => _cameraexamplePageState();
 }
 
-class _cameraexamplePageState extends State<cameraexample> {
+class _cameraexamplePageState extends State<qqww> {
   XFile? _pickedFile;
 
   @override

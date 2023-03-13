@@ -3,6 +3,7 @@ import 'package:avatar3_flutter/closet/closet_Bottom.dart';
 import 'package:avatar3_flutter/closet/closet_Outer.dart';
 import 'package:avatar3_flutter/closet/closet_Hair.dart';
 import 'package:avatar3_flutter/closet/closet_Shoes.dart';
+import 'package:avatar3_flutter/closet/closet_Top.dart';
 import 'package:flutter/material.dart';
 
 class TabCloset extends StatefulWidget {
@@ -19,7 +20,7 @@ class _GridviewState extends State<TabCloset> {
       home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.black,
-            title: const Text('목록'),
+            title: const Text('옷장'),
           ),
           body: GridView.count(crossAxisCount: 2, children: <Widget>[
             GestureDetector(
@@ -30,7 +31,7 @@ class _GridviewState extends State<TabCloset> {
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 90,
                   height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -59,11 +60,12 @@ class _GridviewState extends State<TabCloset> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HairScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => const AccessoriesScreen()),
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 90,
                   height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -99,12 +101,11 @@ class _GridviewState extends State<TabCloset> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const AccessoriesScreen()),
+                  MaterialPageRoute(builder: (context) => const OuterScreen()),
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 90,
                   height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -133,11 +134,11 @@ class _GridviewState extends State<TabCloset> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const OuterScreen()),
+                  MaterialPageRoute(builder: (context) => const TopScreen()),
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 90,
                   height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -170,7 +171,7 @@ class _GridviewState extends State<TabCloset> {
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 90,
                   height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -203,7 +204,7 @@ class _GridviewState extends State<TabCloset> {
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 90,
                   height: 90,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),

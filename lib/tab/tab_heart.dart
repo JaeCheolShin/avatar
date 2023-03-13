@@ -1,13 +1,13 @@
+import 'package:avatar3_flutter/Heart/heart_1.dart';
 import 'package:avatar3_flutter/Heart/heart_10.dart';
+import 'package:avatar3_flutter/Heart/heart_2.dart';
+import 'package:avatar3_flutter/Heart/heart_3.dart';
 import 'package:avatar3_flutter/Heart/heart_4.dart';
 import 'package:avatar3_flutter/Heart/heart_5.dart';
 import 'package:avatar3_flutter/Heart/heart_6.dart';
 import 'package:avatar3_flutter/Heart/heart_7.dart';
 import 'package:avatar3_flutter/Heart/heart_8.dart';
 import 'package:avatar3_flutter/Heart/heart_9.dart';
-import 'package:avatar3_flutter/avatar/123.dart';
-import 'package:avatar3_flutter/avatar/12345.dart';
-import 'package:avatar3_flutter/mypage/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class TabHeart extends StatefulWidget {
@@ -31,11 +31,11 @@ class _HeartGridviewState extends State<TabHeart> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const one()),
+                  MaterialPageRoute(builder: (context) => const Heart1()),
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -49,11 +49,11 @@ class _HeartGridviewState extends State<TabHeart> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ProfilePage()),
+                  MaterialPageRoute(builder: (context) => const Heart2()),
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -67,12 +67,11 @@ class _HeartGridviewState extends State<TabHeart> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const CameraExample()),
+                  MaterialPageRoute(builder: (context) => const Heart3()),
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -90,7 +89,7 @@ class _HeartGridviewState extends State<TabHeart> {
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -108,7 +107,7 @@ class _HeartGridviewState extends State<TabHeart> {
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -126,7 +125,7 @@ class _HeartGridviewState extends State<TabHeart> {
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -144,7 +143,7 @@ class _HeartGridviewState extends State<TabHeart> {
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -162,7 +161,7 @@ class _HeartGridviewState extends State<TabHeart> {
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -180,7 +179,7 @@ class _HeartGridviewState extends State<TabHeart> {
                 );
               },
               child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
@@ -198,12 +197,12 @@ class _HeartGridviewState extends State<TabHeart> {
                   );
                 },
                 child: Container(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Container(
-                      color: Colors.grey.shade400,
+                      color: Colors.grey.shade300,
                       width: 100,
                       height: 100,
                       margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),

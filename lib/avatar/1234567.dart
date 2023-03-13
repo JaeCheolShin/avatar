@@ -16,14 +16,14 @@ import '../setting/setting_item.dart';
 import '../setting/user.dart';
 import '../setting/user_preferences.dart';
 
-class TabMypage extends StatefulWidget {
-  const TabMypage({Key? key}) : super(key: key);
+class qqwweerr extends StatefulWidget {
+  const qqwweerr({Key? key}) : super(key: key);
 
   @override
   _AccountPageState createState() => _AccountPageState();
 }
 
-class _AccountPageState extends State<TabMypage> {
+class _AccountPageState extends State<qqwweerr> {
   @override
   Widget build(BuildContext context) {
     const user = UserPreferences.myUser;
@@ -61,7 +61,7 @@ class _AccountPageState extends State<TabMypage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const ProfileScreen()),
+                      builder: (context) => const qqwwee()),
                 );
               }),
           const SizedBox(height: 10),

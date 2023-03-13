@@ -1,6 +1,7 @@
 import 'package:avatar3_flutter/screens/screen_onboarding.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 import 'firebase_options.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => QueryProvider()),
         ChangeNotifierProvider(create: (_) => CartProvider()),
       ],
-      child: MaterialApp(
+      child: GetMaterialApp(
         title: 'Flutter Shopping mall',
         routes: {
           '/index': (context) => const IndexScreen(),
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/splash',
         debugShowCheckedModeBanner: false,
-        darkTheme: ThemeData.light(),
+        darkTheme: ThemeData.light(), //dark로 바꾸면 다크모드 활성화
       ),
     );
   }

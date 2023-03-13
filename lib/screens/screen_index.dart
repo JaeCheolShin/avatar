@@ -18,9 +18,15 @@ class _IndexScreenState extends State<IndexScreen> {
   int _currentIndex = 2;
 
   final List<Widget> tabs = [
-    TabSearch(),
+    const TabSearch(),
     const TabCloset(),
-    const TabAvatar(),
+    Navigator(
+      onGenerateRoute: (routesettings) {
+        return MaterialPageRoute(
+          builder: (context) => const TabAvatar(),
+        );
+      },
+    ),
     const TabHeart(),
     const TabMypage(),
   ];

@@ -1,5 +1,3 @@
-import 'package:avatar3_flutter/avatar/%ED%94%84%EB%A1%9C%ED%95%84%20%EC%9E%84%EC%8B%9C1.dart';
-
 import 'package:avatar3_flutter/models/model_auth.dart';
 import 'package:avatar3_flutter/mypage/mypage_FAQ.dart';
 import 'package:avatar3_flutter/mypage/mypage_buylist.dart';
@@ -39,6 +37,7 @@ class _AccountPageState extends State<TabMypage> {
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
+          const SizedBox(height: 24),
           ProfileWidget(
             imagePath: user.imagePath,
             onClicked: () {
@@ -72,7 +71,7 @@ class _AccountPageState extends State<TabMypage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const ProfileScreen()),
+                      builder: (context) => const EditProfilePage()),
                 );
               }),
           const SizedBox(height: 10),

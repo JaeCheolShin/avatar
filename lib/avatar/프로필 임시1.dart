@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({super.key});
+class qqwwee extends StatefulWidget {
+  const qqwwee({super.key});
 
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen>
+class _ProfileScreenState extends State<qqwwee>
     with SingleTickerProviderStateMixin {
   TabController? _tabController;
 
