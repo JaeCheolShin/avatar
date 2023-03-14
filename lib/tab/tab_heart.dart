@@ -1,13 +1,10 @@
 import 'package:avatar3_flutter/Heart/heart_1.dart';
-import 'package:avatar3_flutter/Heart/heart_10.dart';
 import 'package:avatar3_flutter/Heart/heart_2.dart';
 import 'package:avatar3_flutter/Heart/heart_3.dart';
 import 'package:avatar3_flutter/Heart/heart_4.dart';
 import 'package:avatar3_flutter/Heart/heart_5.dart';
 import 'package:avatar3_flutter/Heart/heart_6.dart';
 import 'package:avatar3_flutter/Heart/heart_7.dart';
-import 'package:avatar3_flutter/Heart/heart_8.dart';
-import 'package:avatar3_flutter/Heart/heart_9.dart';
 import 'package:flutter/material.dart';
 
 class TabHeart extends StatefulWidget {
@@ -142,7 +139,7 @@ class _HeartGridviewState extends State<TabHeart> {
                   MaterialPageRoute(builder: (context) => const Heart7()),
                 );
               },
-              child: Container(
+              /*child: Container(
                   color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
@@ -193,7 +190,7 @@ class _HeartGridviewState extends State<TabHeart> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Heart10()),
+                    MaterialPageRoute(builder: (context) => const qq()),
                   );
                 },
                 child: Container(
@@ -211,7 +208,8 @@ class _HeartGridviewState extends State<TabHeart> {
                         height: 90,
                         width: 80,
                       )),
-                )),
+                ),*/
+            ),
           ])),
       debugShowCheckedModeBanner: false,
     );

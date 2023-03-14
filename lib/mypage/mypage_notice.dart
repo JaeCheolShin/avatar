@@ -5,6 +5,15 @@ class Notice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      color: Colors.white,
+      child: const Center(
+        child: Text(
+          '공지사항',
+          style: TextStyle(
+              color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600),
+        ),
+      ),
+    );
   }
 }

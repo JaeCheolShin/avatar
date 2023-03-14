@@ -75,7 +75,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 650.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
+                  height: 680.0, //페이지 하단 동그라미들의 높이(전체적인 높이)
                   child: PageView(
                     physics: const ClampingScrollPhysics(),
                     controller: _pageController,
@@ -106,9 +106,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               child: Image(
                                 image:
                                     AssetImage('assets/images/onboarding1.png'),
-                                height: 500.0,
-                                width: 700.0,
-                                fit: BoxFit.fitWidth,
+                                height: 520.0,
+                                width: 600.0,
+                                fit: BoxFit.fill,
                               ),
                             ),
                             const SizedBox(height: 30.0),
@@ -148,9 +148,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 image: AssetImage(
                                   'assets/images/onboarding2.png',
                                 ),
-                                height: 500.0,
-                                width: 700.0,
-                                fit: BoxFit.fitWidth,
+                                height: 520.0,
+                                width: 600.0,
+                                fit: BoxFit.fill,
                               ),
                             ),
                             const SizedBox(height: 30.0),
@@ -190,9 +190,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 image: AssetImage(
                                   'assets/images/onboarding3.png',
                                 ),
-                                height: 500.0,
-                                width: 700.0,
-                                fit: BoxFit.fitWidth,
+                                height: 520.0,
+                                width: 600.0,
+                                fit: BoxFit.fill,
                               ),
                             ),
                             const SizedBox(height: 30.0),
@@ -232,9 +232,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 image: AssetImage(
                                   'assets/images/onboarding4.png',
                                 ),
-                                height: 500.0,
-                                width: 700.0,
-                                fit: BoxFit.fitWidth,
+                                height: 520.0,
+                                width: 600.0,
+                                fit: BoxFit.fill,
                               ),
                             ),
                             const SizedBox(height: 30.0),

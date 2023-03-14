@@ -12,11 +12,13 @@ class _GridviewState extends State<HairScreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.black,
-            title: const Text('헤어'),
-          ),
-          body: GridView.count(crossAxisCount: 2, children: <Widget>[
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: const Text('헤어'),
+        ),
+        body: GridView.count(
+          crossAxisCount: 2,
+          children: <Widget>[
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -217,7 +219,7 @@ class _GridviewState extends State<HairScreen> {
                     ],
                   )),
             ),
-            GestureDetector(
+            /* GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
@@ -282,8 +284,10 @@ class _GridviewState extends State<HairScreen> {
                       )*/
                     ],
                   )),
-            ),
-          ])),
+            ),*/
+          ],
+        ),
+      ),
       debugShowCheckedModeBanner: false,
     );
   }
