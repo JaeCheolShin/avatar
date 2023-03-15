@@ -1,81 +1,81 @@
-import 'package:avatar3_flutter/tab/tab_avatar.dart';
-import 'package:avatar3_flutter/tab/tab_closet.dart';
-import 'package:avatar3_flutter/tab/tab_heart.dart';
-import 'package:avatar3_flutter/tab/tab_mypage.dart';
-import 'package:avatar3_flutter/tab/tab_search.dart';
 import 'package:flutter/material.dart';
+
+import '../bottom_nav/bottom_navigation.dart';
+import '../bottom_nav/tab_item.dart';
+import '../bottom_nav/tab_navigator.dart';
 
 class IndexScreen extends StatefulWidget {
   const IndexScreen({super.key});
 
   @override
-  _IndexScreenState createState() {
-    return _IndexScreenState();
-  }
+  State<IndexScreen> createState() => _IndexScreenState();
 }
 
 class _IndexScreenState extends State<IndexScreen> {
-  int _currentIndex = 2;
+  var _currentTab = TabItem.avatar;
 
-  final List<Widget> tabs = [
-    const TabSearch(),
-    const TabCloset(),
-    Navigator(
-      onGenerateRoute: (routesettings) {
-        return MaterialPageRoute(
-          builder: (context) => const TabAvatar(),
-        );
-      },
-    ),
-    const TabHeart(),
-    const TabMypage(),
-  ];
+  final _navigatorKeys = {
+    TabItem.search: GlobalKey<NavigatorState>(),
+    TabItem.closet: GlobalKey<NavigatorState>(),
+    TabItem.avatar: GlobalKey<NavigatorState>(),
+    TabItem.heart: GlobalKey<NavigatorState>(),
+    TabItem.mypage: GlobalKey<NavigatorState>(),
+  };
+
+  void _selectTab(TabItem tabItem) {
+    if (tabItem == _currentTab) {
+      /// 네비게이션 탭을 누르면, 해당 네비의 첫 스크린으로 이동!
+      _navigatorKeys[tabItem]!.currentState!.popUntil((route) => route.isFirst);
+    } else {
+      setState(() => _currentTab = tabItem);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: SizedBox(
-        height: 80,
-        child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          iconSize: 35,
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.grey,
-          selectedLabelStyle: const TextStyle(fontSize: 12),
-          currentIndex: _currentIndex,
-          onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
-            if (index == 0) {
-              setState(() {
-                _currentIndex = 2;
-              });
-              Navigator.pushNamed(context, '/search');
-            }
-          },
-          items: [
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.search), label: 'search'),
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.door_sliding_outlined), label: 'closet'),
-            BottomNavigationBarItem(
-                icon: Image.asset(
-                  'assets/images/logo.png',
-                  width: 70,
-                  height: 54,
-                ),
-                label: ''),
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.favorite_border), label: 'heart'),
-            const BottomNavigationBarItem(
-                icon: Icon(Icons.person), label: 'My Page'),
+    return WillPopScope(
+      onWillPop: () async {
+        final isFirstRouteInCurrentTab =
+            !await _navigatorKeys[_currentTab]!.currentState!.maybePop();
+
+        if (isFirstRouteInCurrentTab) {
+          // 메인 화면이 아닌 경우
+          if (_currentTab != TabItem.avatar) {
+            // 메인 화면으로 이동
+            _selectTab(TabItem.avatar);
+            // 앱 종료 방지
+            return false;
+          }
+        }
+
+        /// 네비게이션 바의 첫번째 스크린인 경우, 앱 종료
+        return isFirstRouteInCurrentTab;
+      },
+      child: Scaffold(
+        body: Stack(
+          children: <Widget>[
+            _buildOffstageNavigator(TabItem.search),
+            _buildOffstageNavigator(TabItem.closet),
+            _buildOffstageNavigator(TabItem.avatar),
+            _buildOffstageNavigator(TabItem.heart),
+            _buildOffstageNavigator(TabItem.mypage),
           ],
         ),
+        bottomNavigationBar: BottomNavigation(
+          currentTab: _currentTab,
+          onSelectTab: _selectTab,
+        ),
       ),
-      body: tabs[_currentIndex],
     );
+  }
+
+  Widget _buildOffstageNavigator(TabItem tabItem) {
+    /// (offstage == false) -> 트리에서 완전히 제거된다.
+    return Offstage(
+        offstage: _currentTab != tabItem,
+        child: TabNavigator(
+          navigatorKey: _navigatorKeys[tabItem],
+          tabItem: tabItem,
+        ));
   }
 }

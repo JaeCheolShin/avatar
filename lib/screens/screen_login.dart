@@ -1,7 +1,6 @@
+import 'package:avatar3_flutter/screens/screen_index.dart';
 import 'package:avatar3_flutter/login_page/login_avatar.dart';
 import 'package:flutter/material.dart';
-
-import 'screen_index.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);

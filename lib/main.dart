@@ -1,3 +1,4 @@
+import 'package:avatar3_flutter/screens/screen_index.dart';
 import 'package:avatar3_flutter/screens/screen_onboarding.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,6 @@ import 'models/model_item_provider.dart';
 import 'models/model_query.dart';
 import 'screens/screen_detail.dart';
 import 'screens/screen_splash.dart';
-import 'screens/screen_index.dart';
 import 'screens/screen_login.dart';
 import 'screens/screen_register.dart';
 
