@@ -27,6 +27,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
               padding: const EdgeInsets.symmetric(horizontal: 32),
               physics: const BouncingScrollPhysics(),
               children: [
+                const SizedBox(height: 20),
                 ProfileWidget(
                   imagePath: user.imagePath,
                   isEdit: true,

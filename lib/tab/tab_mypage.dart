@@ -1,15 +1,13 @@
-import 'package:avatar3_flutter/models/model_auth.dart';
-import 'package:avatar3_flutter/mypage/mypage_FAQ.dart';
+import 'package:avatar3_flutter/mypage/mypage_appguide.dart';
 import 'package:avatar3_flutter/mypage/mypage_buylist.dart';
-import 'package:avatar3_flutter/mypage/mypage_notice.dart';
 import 'package:avatar3_flutter/mypage/mypage_setting.dart';
-import 'package:avatar3_flutter/mypage/mypage_update.dart';
 import 'package:avatar3_flutter/mypage/profile_edit_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-import '../models/button1.dart';
+import '../mypage/mypage_delivery.dart';
+import '../mypage/mypage_myinfo.dart';
+import '../mypage/mypage_recentproduct.dart';
+import '../mypage/mypage_servicecenter.dart';
 import '../setting/color.dart';
 import '../setting/profile_widget.dart';
 import '../setting/setting_item.dart';
@@ -31,26 +29,44 @@ class _AccountPageState extends State<TabMypage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: const Text('내 정보'),
+        title: const Center(child: Text('마이페이지')),
       ),
       backgroundColor: appBgColor,
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
-          const SizedBox(height: 24),
-          ProfileWidget(
-            imagePath: user.imagePath,
-            onClicked: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: (context) => const EditProfilePage()),
-              );
-            },
+          const SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20), //모서리를 둥글게
+                  border: Border.all(color: Colors.grey, width: 2)),
+              margin: const EdgeInsets.fromLTRB(5, 5, 5, 5),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 20, 5, 20),
+                    child: ProfileWidget(
+                      imagePath: user.imagePath,
+                      onClicked: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => const EditProfilePage()),
+                        );
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(30, 40, 10, 40),
+                    child: buildName(user),
+                  ),
+                ],
+              ),
+            ),
           ),
-          const SizedBox(height: 24),
-          buildName(user),
-          const SizedBox(height: 24),
-          Center(child: buildUpgradeButton()),
+          /*const SizedBox(height: 24),
+          Center(child: buildUpgradeButton()),*/
           const SizedBox(height: 10),
           buildBody(),
         ],
@@ -64,43 +80,66 @@ class _AccountPageState extends State<TabMypage> {
       child: Column(
         children: [
           SettingItem(
-              title: "프로필 관리",
-              leadingIcon: Icons.tag_faces,
-              leadingIconColor: blue,
+              title: "개인 정보",
+              leadingIcon: Icons.person_pin,
+              leadingIconColor: grey,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Myinfo()),
+                );
+              }),
+          const SizedBox(height: 10),
+          SettingItem(
+              title: "최근 본 상품",
+              leadingIcon: Icons.query_builder_outlined,
+              leadingIconColor: grey,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const EditProfilePage()),
+                      builder: (context) => const RecentProduct()),
                 );
               }),
           const SizedBox(height: 10),
           SettingItem(
-              title: "구매 내역",
-              leadingIcon: Icons.local_mall_outlined,
-              leadingIconColor: blue,
+              title: "주문 배송",
+              leadingIcon: Icons.delivery_dining,
+              leadingIconColor: grey,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Buylist()),
+                  MaterialPageRoute(builder: (context) => const Delivery()),
                 );
               }),
           const SizedBox(height: 10),
           SettingItem(
-              title: "업데이트",
-              leadingIcon: Icons.dark_mode_outlined,
-              leadingIconColor: purple,
+              title: "장바구니",
+              leadingIcon: Icons.shopping_cart,
+              leadingIconColor: grey,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Update()),
+                  MaterialPageRoute(builder: (context) => Buylist()),
+                );
+              }),
+          const SizedBox(height: 10),
+          SettingItem(
+              title: "고객센터",
+              leadingIcon: Icons.headphones,
+              leadingIconColor: grey,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ServiceCenter()),
                 );
               }),
           const SizedBox(height: 10),
           SettingItem(
               title: "설정",
-              leadingIcon: Icons.notifications_outlined,
-              leadingIconColor: orange,
+              leadingIcon: Icons.settings,
+              leadingIconColor: grey,
               onTap: () {
                 Navigator.push(
                   context,
@@ -109,116 +148,31 @@ class _AccountPageState extends State<TabMypage> {
               }),
           const SizedBox(height: 10),
           SettingItem(
-              title: "FAQ",
-              leadingIcon: Icons.privacy_tip_outlined,
-              leadingIconColor: green,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const FAQ()),
-                );
-              }),
-          const SizedBox(height: 10),
-          SettingItem(
-              title: "공지사항",
-              leadingIcon: Icons.info,
+              title: "앱 사용 가이드",
+              leadingIcon: Icons.menu_book_outlined,
               leadingIconColor: grey,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Notice()),
+                  MaterialPageRoute(builder: (context) => const AppGuide()),
                 );
               }),
-          const SizedBox(height: 10),
-          SettingItem(
-            title: "로그아웃",
-            leadingIcon: Icons.logout_outlined,
-            leadingIconColor: Colors.grey.shade400,
-            onTap: () {
-              showConfirmLogout();
-            },
-          ),
-          const SizedBox(height: 10),
         ],
       ),
     );
   }
 
-  showConfirmLogout() {
-    showCupertinoModalPopup(
-        context: context,
-        builder: (context) => CupertinoActionSheet(
-            message: const Text("로그아웃하시겠습니까?"),
-            actions: [
-              CupertinoActionSheetAction(
-                onPressed: () {},
-                child: const Text(
-                  "로그아웃",
-                  style: TextStyle(color: actionColor),
-                ),
-              )
-            ],
-            cancelButton: CupertinoActionSheetAction(
-              child: const Text("취소"),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            )));
-  }
-}
-
-class LoginOutButton extends StatelessWidget {
-  const LoginOutButton({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final authClient =
-        Provider.of<FirebaseAuthProvider>(context, listen: false);
-    return TextButton(
-        onPressed: () async {
-          await authClient.logout();
-          ScaffoldMessenger.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(const SnackBar(content: Text('logout!')));
-          Navigator.of(context).pushReplacementNamed('/login');
-        },
-        child: const Text('로그아웃'));
-  }
-}
-
-Widget buildName(User user) => Column(
-      children: [
-        Text(
-          user.name,
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-        ),
-        const SizedBox(height: 4),
-        Text(
-          user.email,
-          style: const TextStyle(color: Colors.grey),
-        )
-      ],
-    );
-
-Widget buildUpgradeButton() => ButtonWidget(
-      text: 'hehehe',
-      onClicked: () {},
-    );
-
-Widget buildAbout(User user) => Container(
-      padding: const EdgeInsets.symmetric(horizontal: 48),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+  Widget buildName(User user) => Column(
         children: [
-          const Text(
-            'About',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 16),
           Text(
-            user.about,
-            style: const TextStyle(fontSize: 16, height: 1.4),
+            user.name,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
           ),
+          const SizedBox(height: 4),
+          Text(
+            user.email,
+            style: const TextStyle(color: Colors.grey),
+          )
         ],
-      ),
-    );
+      );
+}

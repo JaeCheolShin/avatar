@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Refund extends StatelessWidget {
-  const Refund({super.key});
+class RecentProduct extends StatelessWidget {
+  const RecentProduct({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class Refund extends StatelessWidget {
       color: Colors.white,
       child: const Center(
         child: Text(
-          '환불',
+          '최근 본 상품',
           style: TextStyle(
               color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600),
         ),

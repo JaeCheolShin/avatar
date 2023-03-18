@@ -59,6 +59,7 @@ dependencies:
   side_navigation: ^1.0.4
   flutter_linkify: ^5.0.2
   url_launcher: ^6.1.10
+  google_sign_in: ^6.0.2
 
 
   

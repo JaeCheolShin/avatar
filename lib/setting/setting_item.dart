@@ -40,23 +40,14 @@ class SettingItem extends StatelessWidget {
             children: leadingIcon != null
                 ? [
                     Container(
-                      padding: const EdgeInsets.all(7),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(0),
+                      decoration: const BoxDecoration(
                         color: cardColor,
                         shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: shadowColor.withOpacity(0.1),
-                            spreadRadius: 1,
-                            blurRadius: 1,
-                            offset: const Offset(
-                                0, 1), // changes position of shadow
-                          ),
-                        ],
                       ),
                       child: Icon(
                         leadingIcon,
-                        size: 23,
+                        size: 33,
                         color: leadingIconColor,
                       ),
                     ),
@@ -84,11 +75,6 @@ class SettingItem extends StatelessWidget {
                             fontSize: 15, fontWeight: FontWeight.w500),
                       ),
                     ),
-                    const Icon(
-                      Icons.arrow_forward_ios,
-                      color: labelColor,
-                      size: 14,
-                    )
                   ],
           ),
         ),

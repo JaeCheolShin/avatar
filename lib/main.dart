@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => CartProvider()),
       ],
       child: GetMaterialApp(
-        title: 'Flutter Shopping mall',
+        title: 'AVATAR',
         routes: {
           '/index': (context) => const IndexScreen(),
           '/login': (context) => const LoginScreen(),

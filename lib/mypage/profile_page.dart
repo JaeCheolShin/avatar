@@ -2,7 +2,6 @@ import 'package:avatar3_flutter/mypage/profile_edit_page.dart';
 import 'package:flutter/material.dart';
 
 import '../models/button1.dart';
-import '../setting/numbers_widget.dart';
 import '../setting/profile_widget.dart';
 import '../setting/user.dart';
 import '../setting/user_preferences.dart';
@@ -43,7 +42,6 @@ class _ProfilePageState extends State<ProfilePage> {
               const SizedBox(height: 24),
               Center(child: buildUpgradeButton()),
               const SizedBox(height: 24),
-              const NumbersWidget(),
               const SizedBox(height: 48),
               buildAbout(user),
             ],

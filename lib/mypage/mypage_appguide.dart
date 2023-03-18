@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Notice extends StatelessWidget {
-  const Notice({super.key});
+class AppGuide extends StatelessWidget {
+  const AppGuide({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class Notice extends StatelessWidget {
       color: Colors.white,
       child: const Center(
         child: Text(
-          '공지사항',
+          '앱 사용 가이드',
           style: TextStyle(
               color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600),
         ),

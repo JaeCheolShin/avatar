@@ -39,7 +39,7 @@ class _HeartGridviewState extends State<Heart7> {
             const SizedBox(
               height: 10,
             ),
-           Center(
+            Center(
               child: Container(
                   decoration: BoxDecoration(
                       color: Colors.grey.shade300,

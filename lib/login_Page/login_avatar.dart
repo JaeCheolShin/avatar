@@ -17,7 +17,8 @@ class loginavatar extends StatelessWidget {
           ),
           body: Column(
             children: [
-              Container(
+              const SizedBox(height: 40),
+              SizedBox(
                 child: Image.asset(
                   'assets/images/logo.png',
                   width: 140,
