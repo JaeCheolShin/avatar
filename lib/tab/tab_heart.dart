@@ -7,6 +7,10 @@ import 'package:avatar3_flutter/Heart/heart_6.dart';
 import 'package:avatar3_flutter/Heart/heart_7.dart';
 import 'package:flutter/material.dart';
 
+import '../Heart/heart_8.dart';
+import '../Heart/heart_9.dart';
+import '../avatar/12.dart';
+
 class TabHeart extends StatefulWidget {
   const TabHeart({Key? key}) : super(key: key);
 
@@ -15,14 +19,30 @@ class TabHeart extends StatefulWidget {
 }
 
 class _HeartGridviewState extends State<TabHeart> {
+  bool _isChecked = false;
+  //var refreshKey = GlobalKey<RefreshIndicatorState>();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.black,
-            title: const Text('찜한 코디'),
-          ),
+              elevation: 1,
+              backgroundColor: Colors.white,
+              title: const Padding(
+                  padding: EdgeInsets.only(left: 100),
+                  child: Text(
+                    '찜한 코디',
+                    style: TextStyle(color: Colors.black, fontSize: 20),
+                  )),
+              leading: Switch(
+                value: _isChecked,
+                onChanged: (value) {
+                  setState(() {
+                    _isChecked = value;
+                  });
+                },
+                activeColor: Colors.black,
+              )),
           body: GridView.count(crossAxisCount: 2, children: <Widget>[
             GestureDetector(
               onTap: () {
@@ -139,7 +159,7 @@ class _HeartGridviewState extends State<TabHeart> {
                   MaterialPageRoute(builder: (context) => const Heart7()),
                 );
               },
-              /*child: Container(
+              child: Container(
                   color: Colors.grey.shade300,
                   width: 100,
                   height: 100,
@@ -187,28 +207,28 @@ class _HeartGridviewState extends State<TabHeart> {
                   )),
             ),
             GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const qq()),
-                  );
-                },
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const qq()),
+                );
+              },
+              child: Container(
+                color: Colors.grey.shade300,
+                width: 100,
+                height: 100,
+                margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                 child: Container(
-                  color: Colors.grey.shade300,
-                  width: 100,
-                  height: 100,
-                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
-                  child: Container(
-                      color: Colors.grey.shade300,
-                      width: 100,
-                      height: 100,
-                      margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
-                      child: Image.asset(
-                        'assets/images/logo.png',
-                        height: 90,
-                        width: 80,
-                      )),
-                ),*/
+                    color: Colors.grey.shade300,
+                    width: 100,
+                    height: 100,
+                    margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                    child: Image.asset(
+                      'assets/images/logo.png',
+                      height: 90,
+                      width: 80,
+                    )),
+              ),
             ),
           ])),
       debugShowCheckedModeBanner: false,

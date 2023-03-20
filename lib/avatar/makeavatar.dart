@@ -12,7 +12,7 @@ class MakeAvatar extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: const Text('아바타 생성하기'),
+        title: const Center(child: Text('아바타 생성하기')),
       ),
       body: SafeArea(
         child: Column(

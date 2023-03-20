@@ -22,15 +22,31 @@ class TabMypage extends StatefulWidget {
 }
 
 class _AccountPageState extends State<TabMypage> {
+  bool _isChecked = false;
   @override
   Widget build(BuildContext context) {
     const user = UserPreferences.myUser;
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: const Center(child: Text('마이페이지')),
-      ),
+          elevation: 1,
+          backgroundColor: Colors.white,
+          title: const Padding(
+            padding: EdgeInsets.only(left: 85),
+            child: Text(
+              '마이 페이지',
+              style: TextStyle(color: Colors.black, fontSize: 20),
+            ),
+          ),
+          leading: Switch(
+            value: _isChecked,
+            onChanged: (value) {
+              setState(() {
+                _isChecked = value;
+              });
+            },
+            activeColor: Colors.black,
+          )),
       backgroundColor: appBgColor,
       body: ListView(
         physics: const BouncingScrollPhysics(),
@@ -157,6 +173,7 @@ class _AccountPageState extends State<TabMypage> {
                   MaterialPageRoute(builder: (context) => const AppGuide()),
                 );
               }),
+          const SizedBox(height: 10),
         ],
       ),
     );

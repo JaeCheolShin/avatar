@@ -18,7 +18,8 @@ import 'screens/screen_register.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform); //파이어베이스
   runApp(const MyApp());
 }
 
@@ -35,8 +36,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => CartProvider()),
       ],
       child: GetMaterialApp(
-        title: 'AVATAR',
+        title: 'AVATAR', //이 앱의 주제 title
         routes: {
+          //루트 지정하는곳
           '/index': (context) => const IndexScreen(),
           '/login': (context) => const LoginScreen(),
           '/splash': (context) => const SplashScreen(),
@@ -45,8 +47,8 @@ class MyApp extends StatelessWidget {
           '/search': (context) => const SearchScreen(),
           '/onboarding': (context) => const OnboardingScreen(),
         },
-        initialRoute: '/splash',
-        debugShowCheckedModeBanner: false,
+        initialRoute: '/splash', //처음 시작되는 곳 지정
+        debugShowCheckedModeBanner: false, //앱의 디버그표시
         darkTheme: ThemeData.light(), //dark로 바꾸면 다크모드 활성화
       ),
     );

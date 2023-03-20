@@ -17,8 +17,13 @@ class TabAvatar extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: const Text('내 아바타'),
+        elevation: 1,
+        backgroundColor: Colors.white,
+        title: const Center(
+            child: Text(
+          '내 아바타',
+          style: TextStyle(color: Colors.black, fontSize: 20),
+        )),
       ),
       body: SafeArea(
         child: Column(

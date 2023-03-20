@@ -60,6 +60,9 @@ dependencies:
   flutter_linkify: ^5.0.2
   url_launcher: ^6.1.10
   google_sign_in: ^6.0.2
+  flutter_page_bookmark: ^0.0.1
+  pull_to_refresh: ^2.0.0
+  flutter_switch: ^0.3.2
 
 
   

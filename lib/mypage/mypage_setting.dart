@@ -46,18 +46,18 @@ class _SettingState extends State<Setting> {
           SettingItem(
               title: "알림 설정",
               leadingIcon: Icons.query_builder_outlined,
-              leadingIconColor: blue,
+              leadingIconColor: grey,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const qq()),
+                  MaterialPageRoute(builder: (context) =>  qq()),
                 );
               }),
           const SizedBox(height: 10),
           SettingItem(
               title: "다크 모드",
               leadingIcon: Icons.dark_mode_outlined,
-              leadingIconColor: blue,
+              leadingIconColor: grey,
               onTap: () {
                 Navigator.push(
                   context,
@@ -68,7 +68,7 @@ class _SettingState extends State<Setting> {
           SettingItem(
               title: "코디 추천 설정",
               leadingIcon: Icons.settings_backup_restore_rounded,
-              leadingIconColor: blue,
+              leadingIconColor: grey,
               onTap: () {
                 Navigator.push(
                   context,
@@ -78,7 +78,7 @@ class _SettingState extends State<Setting> {
           SettingItem(
               title: "배송지 관리",
               leadingIcon: Icons.maps_home_work_outlined,
-              leadingIconColor: blue,
+              leadingIconColor: grey,
               onTap: () {
                 Navigator.push(
                   context,
@@ -89,7 +89,7 @@ class _SettingState extends State<Setting> {
           SettingItem(
             title: "로그아웃",
             leadingIcon: Icons.logout,
-            leadingIconColor: Colors.grey.shade400,
+            leadingIconColor: Colors.grey,
             onTap: () {
               showConfirmLogout();
             },
@@ -98,11 +98,11 @@ class _SettingState extends State<Setting> {
           SettingItem(
               title: "회원 탈퇴",
               leadingIcon: Icons.markunread_mailbox_rounded,
-              leadingIconColor: blue,
+              leadingIconColor: grey,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Buylist()),
+                  MaterialPageRoute(builder: (context) => Container()),
                 );
               }),
         ],

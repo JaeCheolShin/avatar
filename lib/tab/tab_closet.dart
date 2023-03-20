@@ -14,14 +14,29 @@ class TabCloset extends StatefulWidget {
 }
 
 class _GridviewState extends State<TabCloset> {
+  bool _isChecked = false;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.black,
-            title: const Text('옷장'),
-          ),
+              backgroundColor: Colors.white,
+              title: const Padding(
+                padding: EdgeInsets.only(left: 115),
+                child: Text(
+                  '옷장',
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
+              ),
+              leading: Switch(
+                value: _isChecked,
+                onChanged: (value) {
+                  setState(() {
+                    _isChecked = value;
+                  });
+                },
+                activeColor: Colors.black,
+              )),
           body: GridView.count(crossAxisCount: 2, children: <Widget>[
             GestureDetector(
               onTap: () {

@@ -49,7 +49,7 @@ class _MyinfoState extends State<Myinfo> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const qq()),
+                  MaterialPageRoute(builder: (context) => qq()),
                 );
               }),
           const SizedBox(height: 10),

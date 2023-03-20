@@ -1,102 +1,62 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
-class qq extends StatelessWidget {
-  const qq({Key? key}) : super(key: key);
+class qq extends StatefulWidget {
+  const qq({super.key});
 
-  Widget _list() {
-    return Center(
-      child: SingleChildScrollView(
-        child: Column(
-          children: List.generate(
-            20,
-            (index) => Container(
-              margin: const EdgeInsets.all(8),
-              height: 200,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                color: Colors.grey,
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<qq> {
+  var list;
+  var random;
+  var refreshKey = GlobalKey<RefreshIndicatorState>();
+  bool _isChecked = false;
+  //초기에 값을 랜덤에 넣어줌.
+  @override
+  void initState() {
+    super.initState();
+    random = Random();
+    refreshList();
   }
 
-  Widget _categoryMenu(BuildContext context) {
-    return Wrap(
-      children: [
-        GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Container()));
-          },
-          child: Container(
-            margin: const EdgeInsets.all(8),
-            width: 100,
-            height: 30,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
-              color: Colors.grey,
-            ),
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.all(8),
-          width: 100,
-          height: 30,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            color: Colors.grey,
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.all(8),
-          width: 100,
-          height: 30,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            color: Colors.grey,
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.all(8),
-          width: 100,
-          height: 30,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            color: Colors.grey,
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.all(8),
-          width: 100,
-          height: 30,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            color: Colors.grey,
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.all(8),
-          width: 100,
-          height: 30,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            color: Colors.grey,
-          ),
-        ),
-      ],
-    );
+  //async wait 을 쓰기 위해서는 Future 타입을 이용함
+  Future<void> refreshList() async {
+    refreshKey.currentState?.show(atTop: false);
+    await Future.delayed(const Duration(seconds: 0)); //thread sleep 같은 역할을 함.
+    //새로운 정보를 그려내는 곳
+    setState(() {
+      list = List.generate(random.nextInt(100), (i) => "Item $i");
+    });
+    return;
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        _categoryMenu(context),
-        Expanded(child: _list()),
-      ],
+    return Scaffold(
+      appBar: AppBar(
+          title: const Text("Test"),
+          leading: Switch(
+            value: _isChecked,
+            onChanged: (value) {
+              setState(() {
+                _isChecked = value;
+              });
+            },
+            activeColor: Colors.red,
+          )),
+      body: RefreshIndicator(
+        key: refreshKey,
+        onRefresh: refreshList,
+        child: ListView.builder(
+          itemCount: list?.length,
+          itemBuilder: (context, i) => ListTile(
+            title: Text(list[i]),
+          ),
+        ),
+      ),
     );
   }
 }
