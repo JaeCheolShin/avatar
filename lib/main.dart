@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
           '/register': (context) => const RegisterScreen(),
           '/detail': (context) => DetailScreen(),
           '/search': (context) => const SearchScreen(),
-          '/onboarding': (context) => const OnboardingScreen(),
+          '/AppGuide': (context) => const AppGuideScreen(),
         },
         initialRoute: '/splash', //처음 시작되는 곳 지정
         debugShowCheckedModeBanner: false, //앱의 디버그표시

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:avatar3_flutter/screens/screen_onboarding.dart';
+import 'package:avatar3_flutter/screens/screen_login.dart';
 import 'package:avatar3_flutter/setting/db.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -14,12 +14,11 @@ class SplashScreen extends StatelessWidget {
       final SharedPreferences db = await prefs;
       var userId = db.getString("uid");
       if (userId != null) {
-        Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => const OnboardingScreen()));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (context) => const LoginScreen())); //OnboardingScreen으로 교체
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (context) =>
-                const OnboardingScreen())); //나중에 indexscreen으로 바꾸기
+            builder: (context) => const LoginScreen())); //나중에 으로 바꾸기
       }
     });
 

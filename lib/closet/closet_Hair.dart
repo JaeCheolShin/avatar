@@ -13,6 +13,7 @@ class _GridviewState extends State<HairScreen> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Colors.black,
           title: const Text('헤어'),
         ),

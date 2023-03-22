@@ -1,5 +1,6 @@
 import 'package:avatar3_flutter/screens/screen_index.dart';
 import 'package:avatar3_flutter/login_page/login_avatar.dart';
+import 'package:avatar3_flutter/screens/screen_onboarding.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -208,47 +209,70 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            OutlinedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const IndexScreen()));
-              },
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(17)),
-                  backgroundColor: Colors.white,
-                  side: const BorderSide(color: Colors.grey, width: 0.5)),
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.4,
-                height: MediaQuery.of(context).size.height * 0.05,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text(
-                      '체험하기',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500),
-                    )
-                  ],
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const IndexScreen()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17)),
+                      backgroundColor: Colors.white,
+                      side: const BorderSide(color: Colors.grey, width: 0.5)),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.21,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Text(
+                          '체험하기',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500),
+                        )
+                      ],
+                    ),
+                  ),
                 ),
-              ),
+                const SizedBox(width: 20),
+                OutlinedButton(
+                  onPressed: () {
+                    showModalBottomSheet<void>(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return const AppGuideScreen();
+                      },
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17)),
+                      backgroundColor: Colors.white,
+                      side: const BorderSide(color: Colors.grey, width: 0.5)),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.21,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Text(
+                          '앱 가이드',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
-            /* const SizedBox(
-              height: 1,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 125),
-              child: Divider(
-                thickness: 2,
-                // height: 30,
-                color: Colors.grey,
-                indent: 30,
-                endIndent: 150,
-              ),
-            ), 아래서 구역을 나누는 선 하나
-           */
             const SizedBox(
               height: 45,
             ),

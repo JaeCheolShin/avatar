@@ -24,6 +24,7 @@ class _SettingState extends State<Setting> {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.black,
         title: const Center(child: Text('고객 센터')),
       ),
@@ -50,7 +51,7 @@ class _SettingState extends State<Setting> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  qq()),
+                  MaterialPageRoute(builder: (context) => const qq()),
                 );
               }),
           const SizedBox(height: 10),

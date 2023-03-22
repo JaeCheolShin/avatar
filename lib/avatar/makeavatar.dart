@@ -11,6 +11,7 @@ class MakeAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.black,
         title: const Center(child: Text('아바타 생성하기')),
       ),

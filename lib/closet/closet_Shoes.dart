@@ -13,6 +13,7 @@ class _GridviewState extends State<ShoesScreen> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Colors.black,
           title: const Text('신발'),
         ),

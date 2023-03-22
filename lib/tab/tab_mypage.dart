@@ -3,6 +3,7 @@ import 'package:avatar3_flutter/mypage/mypage_buylist.dart';
 import 'package:avatar3_flutter/mypage/mypage_setting.dart';
 import 'package:avatar3_flutter/mypage/profile_edit_page.dart';
 import 'package:flutter/material.dart';
+import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 import '../mypage/mypage_delivery.dart';
 import '../mypage/mypage_myinfo.dart';
@@ -22,31 +23,45 @@ class TabMypage extends StatefulWidget {
 }
 
 class _AccountPageState extends State<TabMypage> {
-  bool _isChecked = false;
   @override
   Widget build(BuildContext context) {
     const user = UserPreferences.myUser;
 
     return Scaffold(
       appBar: AppBar(
-          elevation: 1,
-          backgroundColor: Colors.white,
-          title: const Padding(
-            padding: EdgeInsets.only(left: 85),
-            child: Text(
-              '마이 페이지',
-              style: TextStyle(color: Colors.black, fontSize: 20),
+        elevation: 1,
+        backgroundColor: Colors.white,
+        title: const Padding(
+          padding: EdgeInsets.all(0),
+          child: Text(
+            '마이 페이지',
+            style: TextStyle(color: Colors.black, fontSize: 20),
+          ),
+        ),
+        centerTitle: true,
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: LiteRollingSwitch(
+              value: true,
+              width: 80,
+              textOn: 'on',
+              textOff: 'off',
+              colorOn: Colors.blueGrey,
+              colorOff: Colors.deepPurple,
+              iconOn: Icons.power_settings_new,
+              iconOff: Icons.power_settings_new,
+              animationDuration: const Duration(milliseconds: 300),
+              onChanged: (bool state) {
+                print('turned ${(state) ? 'on' : 'off'}');
+              },
+              onDoubleTap: () {},
+              onSwipe: () {},
+              onTap: () {},
             ),
           ),
-          leading: Switch(
-            value: _isChecked,
-            onChanged: (value) {
-              setState(() {
-                _isChecked = value;
-              });
-            },
-            activeColor: Colors.black,
-          )),
+        ],
+      ),
       backgroundColor: appBgColor,
       body: ListView(
         physics: const BouncingScrollPhysics(),

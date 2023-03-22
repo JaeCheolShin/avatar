@@ -13,6 +13,7 @@ class _GridviewState extends State<AccessoriesScreen> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
+            centerTitle: true,
             backgroundColor: Colors.black,
             title: const Text('모자/안경/악세서리'),
           ),

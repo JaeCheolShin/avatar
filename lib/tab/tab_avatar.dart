@@ -1,9 +1,16 @@
-import 'package:avatar3_flutter/avatar/makeavatar.dart';
 import 'package:flutter/material.dart';
 
-class TabAvatar extends StatelessWidget {
+import '../avatar/makeavatar.dart';
+
+class TabAvatar extends StatefulWidget {
   const TabAvatar({super.key});
 
+  @override
+  State<TabAvatar> createState() => _TabAvatarState();
+}
+
+class _TabAvatarState extends State<TabAvatar> {
+  bool _isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,10 +27,25 @@ class TabAvatar extends StatelessWidget {
         elevation: 1,
         backgroundColor: Colors.white,
         title: const Center(
-            child: Text(
-          '내 아바타',
-          style: TextStyle(color: Colors.black, fontSize: 20),
+            child: Padding(
+          padding: EdgeInsets.only(left: 60),
+          child: Text(
+            '내 아바타',
+            style: TextStyle(color: Colors.black, fontSize: 20),
+          ),
         )),
+        centerTitle: true,
+        actions: <Widget>[
+          Switch(
+            value: _isChecked,
+            onChanged: (value) {
+              setState(() {
+                _isChecked = value;
+              });
+            },
+            activeColor: Colors.black,
+          )
+        ],
       ),
       body: SafeArea(
         child: Column(

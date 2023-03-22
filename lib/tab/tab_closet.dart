@@ -20,15 +20,17 @@ class _GridviewState extends State<TabCloset> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-              backgroundColor: Colors.white,
-              title: const Padding(
-                padding: EdgeInsets.only(left: 115),
-                child: Text(
-                  '옷장',
-                  style: TextStyle(color: Colors.black, fontSize: 20),
-                ),
+            backgroundColor: Colors.white,
+            title: const Padding(
+              padding: EdgeInsets.all(0),
+              child: Text(
+                '옷장',
+                style: TextStyle(color: Colors.black, fontSize: 20),
               ),
-              leading: Switch(
+            ),
+            centerTitle: true,
+            actions: <Widget>[
+              Switch(
                 value: _isChecked,
                 onChanged: (value) {
                   setState(() {
@@ -36,7 +38,9 @@ class _GridviewState extends State<TabCloset> {
                   });
                 },
                 activeColor: Colors.black,
-              )),
+              )
+            ],
+          ),
           body: GridView.count(crossAxisCount: 2, children: <Widget>[
             GestureDetector(
               onTap: () {

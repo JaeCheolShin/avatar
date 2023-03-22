@@ -23,6 +23,7 @@ class DetailScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(item.title),
       ),
       body: Container(
@@ -49,15 +50,15 @@ class DetailScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        item.price.toString() + '원',
+                        '${item.price}원',
                         style: const TextStyle(fontSize: 18, color: Colors.red),
                       ),
                       Text(
-                        '브랜드 : ' + item.brand,
+                        '브랜드 : ${item.brand}',
                         style: const TextStyle(fontSize: 16),
                       ),
                       Text(
-                        '등록일 : ' + item.registerDate,
+                        '등록일 : ${item.registerDate}',
                         style: const TextStyle(fontSize: 16),
                       )
                     ],

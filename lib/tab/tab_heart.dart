@@ -26,15 +26,18 @@ class _HeartGridviewState extends State<TabHeart> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-              elevation: 1,
-              backgroundColor: Colors.white,
-              title: const Padding(
-                  padding: EdgeInsets.only(left: 100),
-                  child: Text(
-                    '찜한 코디',
-                    style: TextStyle(color: Colors.black, fontSize: 20),
-                  )),
-              leading: Switch(
+            elevation: 1,
+            backgroundColor: Colors.white,
+            title: const Padding(
+              padding: EdgeInsets.all(0),
+              child: Text(
+                '찜한 코디',
+                style: TextStyle(color: Colors.black, fontSize: 20),
+              ),
+            ),
+            centerTitle: true,
+            actions: <Widget>[
+              Switch(
                 value: _isChecked,
                 onChanged: (value) {
                   setState(() {
@@ -42,7 +45,9 @@ class _HeartGridviewState extends State<TabHeart> {
                   });
                 },
                 activeColor: Colors.black,
-              )),
+              )
+            ],
+          ),
           body: GridView.count(crossAxisCount: 2, children: <Widget>[
             GestureDetector(
               onTap: () {

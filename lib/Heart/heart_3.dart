@@ -12,6 +12,7 @@ class _HeartGridviewState extends State<Heart3> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.black,
         title: const Text('찜한 코디'),
       ),
@@ -39,7 +40,7 @@ class _HeartGridviewState extends State<Heart3> {
             const SizedBox(
               height: 10,
             ),
-           Center(
+            Center(
               child: Container(
                   decoration: BoxDecoration(
                       color: Colors.grey.shade300,

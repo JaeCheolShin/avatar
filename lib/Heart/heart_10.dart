@@ -12,6 +12,7 @@ class _HeartGridviewState extends State<Heart10> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.black,
         title: const Text('찜한 코디'),
       ),

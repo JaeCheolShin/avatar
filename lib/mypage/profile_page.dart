@@ -22,6 +22,7 @@ class _ProfilePageState extends State<ProfilePage> {
       child: Builder(
         builder: (context) => Scaffold(
           appBar: AppBar(
+            centerTitle: true,
             backgroundColor: Colors.black,
             title: const Text('내 정보'),
           ),
