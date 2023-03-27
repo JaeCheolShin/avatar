@@ -26,14 +26,10 @@ class _TabAvatarState extends State<TabAvatar> {
       appBar: AppBar(
         elevation: 1,
         backgroundColor: Colors.white,
-        title: const Center(
-            child: Padding(
-          padding: EdgeInsets.only(left: 60),
-          child: Text(
-            '내 아바타',
-            style: TextStyle(color: Colors.black, fontSize: 20),
-          ),
-        )),
+        title: const Text(
+          '홈',
+          style: TextStyle(color: Colors.black, fontSize: 20),
+        ),
         centerTitle: true,
         actions: <Widget>[
           Switch(

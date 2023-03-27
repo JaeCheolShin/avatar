@@ -3,7 +3,6 @@ import 'package:avatar3_flutter/mypage/mypage_buylist.dart';
 import 'package:avatar3_flutter/mypage/mypage_setting.dart';
 import 'package:avatar3_flutter/mypage/profile_edit_page.dart';
 import 'package:flutter/material.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 import '../mypage/mypage_delivery.dart';
 import '../mypage/mypage_myinfo.dart';
@@ -22,6 +21,8 @@ class TabMypage extends StatefulWidget {
   _AccountPageState createState() => _AccountPageState();
 }
 
+bool _isChecked = false;
+
 class _AccountPageState extends State<TabMypage> {
   @override
   Widget build(BuildContext context) {
@@ -31,15 +32,23 @@ class _AccountPageState extends State<TabMypage> {
       appBar: AppBar(
         elevation: 1,
         backgroundColor: Colors.white,
-        title: const Padding(
-          padding: EdgeInsets.all(0),
-          child: Text(
-            '마이 페이지',
-            style: TextStyle(color: Colors.black, fontSize: 20),
-          ),
+        title: const Text(
+          '마이 페이지',
+          style: TextStyle(color: Colors.black, fontSize: 20),
         ),
         centerTitle: true,
         actions: <Widget>[
+          Switch(
+            value: _isChecked,
+            onChanged: (value) {
+              setState(() {
+                _isChecked = value;
+              });
+            },
+            activeColor: Colors.black,
+          )
+        ],
+        /*actions: <Widget>[
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: LiteRollingSwitch(
@@ -60,7 +69,7 @@ class _AccountPageState extends State<TabMypage> {
               onTap: () {},
             ),
           ),
-        ],
+        ],*/
       ),
       backgroundColor: appBgColor,
       body: ListView(
@@ -196,7 +205,7 @@ class _AccountPageState extends State<TabMypage> {
 
   Widget buildName(User user) => Column(
         children: [
-          Text(
+          Text( 
             user.name,
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
           ),

@@ -10,7 +10,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(milliseconds: 1400), () async {
+    Future.delayed(const Duration(milliseconds: 1000), () async {
       final SharedPreferences db = await prefs;
       var userId = db.getString("uid");
       if (userId != null) {

@@ -20,9 +20,7 @@ class _cameraexamplePageState extends State<qqww> {
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('얼굴 아바타 생성'),
-        ),
+        appBar: AppBar(title: const Text('얼굴 아바타 생성'), centerTitle: true),
         body: Column(
           children: [
             const SizedBox(

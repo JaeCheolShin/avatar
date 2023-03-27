@@ -1,4 +1,3 @@
-import 'package:avatar3_flutter/avatar/12.dart';
 import 'package:avatar3_flutter/mypage/mypage_buylist.dart';
 import 'package:avatar3_flutter/mypage/mypage_setting.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +24,7 @@ class _MyinfoState extends State<Myinfo> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.black,
-        title: const Center(child: Text('개인 정보')),
+        title: const Text('개인 정보'),
       ),
       backgroundColor: appBgColor,
       body: ListView(
@@ -50,7 +49,7 @@ class _MyinfoState extends State<Myinfo> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const qq()),
+                  MaterialPageRoute(builder: (context) => Container()),
                 );
               }),
           const SizedBox(height: 10),

@@ -1,61 +1,99 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
-class qq extends StatefulWidget {
-  const qq({super.key});
+class cc extends StatefulWidget {
+  const cc({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _ccState createState() => _ccState();
 }
 
-class _HomePageState extends State<qq> {
-  var list;
-  var random;
-  var refreshKey = GlobalKey<RefreshIndicatorState>();
-  bool _isChecked = false;
-  //초기에 값을 랜덤에 넣어줌.
+class _ccState extends State<cc> with TickerProviderStateMixin {
+  late TabController _tabController;
+
   @override
   void initState() {
+    _tabController = TabController(
+      length: 2,
+      vsync: this, //vsync에 this 형태로 전달해야 애니메이션이 정상 처리됨
+    );
     super.initState();
-    random = Random();
-    refreshList();
-  }
-
-  //async wait 을 쓰기 위해서는 Future 타입을 이용함
-  Future<void> refreshList() async {
-    refreshKey.currentState?.show(atTop: false);
-    await Future.delayed(const Duration(seconds: 0)); //thread sleep 같은 역할을 함.
-    //새로운 정보를 그려내는 곳
-    setState(() {
-      list = List.generate(random.nextInt(100), (i) => "Item $i");
-    });
-    return;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text("Test"),
-          leading: Switch(
-            value: _isChecked,
-            onChanged: (value) {
-              setState(() {
-                _isChecked = value;
-              });
-            },
-            activeColor: Colors.red,
-          )),
-      body: RefreshIndicator(
-        key: refreshKey,
-        onRefresh: refreshList,
-        child: ListView.builder(
-          itemCount: list?.length,
-          itemBuilder: (context, i) => ListTile(
-            title: Text(list[i]),
-          ),
+        title: const Text(
+          'TabPage',
         ),
+      ),
+      body: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(),
+            ),
+            child: TabBar(
+              tabs: [
+                Container(
+                  height: 80,
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'Tab1',
+                  ),
+                ),
+                Container(
+                  height: 80,
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'Tab2',
+                  ),
+                ),
+              ],
+              indicator: const BoxDecoration(
+                gradient: LinearGradient(
+                  //배경 그라데이션 적용
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    Colors.blueAccent,
+                    Colors.pinkAccent,
+                  ],
+                ),
+              ),
+              labelColor: Colors.white,
+              unselectedLabelColor: Colors.black,
+              controller: _tabController,
+            ),
+          ),
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                Container(
+                  color: Colors.yellow[200],
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'Tab1 View',
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),
+                  ),
+                ),
+                Container(
+                  color: Colors.green[200],
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'Tab2 View',
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

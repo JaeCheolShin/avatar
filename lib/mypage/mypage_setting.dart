@@ -1,4 +1,3 @@
-import 'package:avatar3_flutter/avatar/12.dart';
 import 'package:avatar3_flutter/mypage/mypage_buylist.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +50,7 @@ class _SettingState extends State<Setting> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const qq()),
+                  MaterialPageRoute(builder: (context) => Container()),
                 );
               }),
           const SizedBox(height: 10),
@@ -76,6 +75,7 @@ class _SettingState extends State<Setting> {
                   MaterialPageRoute(builder: (context) => Buylist()),
                 );
               }),
+          const SizedBox(height: 10),
           SettingItem(
               title: "배송지 관리",
               leadingIcon: Icons.maps_home_work_outlined,

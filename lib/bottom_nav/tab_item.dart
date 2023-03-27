@@ -33,7 +33,7 @@ const Map<TabItem, int> tabIdx = {
 
 Map<TabItem, Widget> tabScreen = {
   TabItem.search: const TabSearch(),
-  TabItem.closet: const TabCloset(),
+  TabItem.closet: TabCloset(),
   TabItem.avatar: const TabAvatar(),
   TabItem.heart: const TabHeart(),
   TabItem.mypage: const TabMypage(),

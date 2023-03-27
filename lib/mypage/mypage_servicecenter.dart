@@ -1,4 +1,3 @@
-import 'package:avatar3_flutter/avatar/12.dart';
 import 'package:avatar3_flutter/mypage/mypage_buylist.dart';
 import 'package:flutter/material.dart';
 
@@ -48,7 +47,7 @@ class _ServiceCenterState extends State<ServiceCenter> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const qq()),
+                  MaterialPageRoute(builder: (context) => Container()),
                 );
               }),
           const SizedBox(height: 10),

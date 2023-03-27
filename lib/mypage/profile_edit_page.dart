@@ -20,9 +20,13 @@ class _EditProfilePageState extends State<EditProfilePage> {
         child: Builder(
           builder: (context) => Scaffold(
             appBar: AppBar(
+              elevation: 1,
+              backgroundColor: Colors.white,
+              title: const Text(
+                '프로필 편집',
+                style: TextStyle(color: Colors.black, fontSize: 20),
+              ),
               centerTitle: true,
-              backgroundColor: Colors.black,
-              title: const Text('내 정보'),
             ),
             body: ListView(
               padding: const EdgeInsets.symmetric(horizontal: 32),

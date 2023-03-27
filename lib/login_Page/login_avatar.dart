@@ -30,7 +30,7 @@ class loginavatar extends StatelessWidget {
                 style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500),
               ),
               const SizedBox(
-                height: 100,
+                height: 30,
               ),
               const EmailInput(),
               const PasswordInput(),
@@ -69,9 +69,9 @@ class EmailInput extends StatelessWidget {
         },
         keyboardType: TextInputType.emailAddress,
         decoration: const InputDecoration(
-          labelText: 'email', // 아이디 입력창에 띄울 텍스트
+          labelText: 'Email', // 아이디 입력창에 띄울 텍스트
           helperText: '', //id 아래 작은 글씨
-          hintText: 'Enter your email', //email을 누르면 나타나는 글씨
+          hintText: 'Enter your Email', //email을 누르면 나타나는 글씨
         ),
       ),
     );
@@ -96,9 +96,9 @@ class PasswordInput extends StatelessWidget {
         },
         obscureText: true,
         decoration: const InputDecoration(
-          labelText: 'password', // 비밀번호 입력창에 띄울 텍스트
+          labelText: 'Password', // 비밀번호 입력창에 띄울 텍스트
           helperText: '', //password 아래 작은 글씨
-          hintText: 'Enter your password', //password를 누르면 나타나는 글씨
+          hintText: 'Enter your Password', //password를 누르면 나타나는 글씨
         ),
       ),
     );
@@ -141,7 +141,7 @@ class LoginButton extends StatelessWidget {
           });
         },
         child: const Text(
-          'Login',
+          '로그인',
           style: TextStyle(color: Colors.white),
         ),
       ),

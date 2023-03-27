@@ -223,7 +223,7 @@ class LoginScreen extends StatelessWidget {
                       backgroundColor: Colors.white,
                       side: const BorderSide(color: Colors.grey, width: 0.5)),
                   child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.21,
+                    width: MediaQuery.of(context).size.width * 0.22,
                     height: MediaQuery.of(context).size.height * 0.05,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -255,7 +255,7 @@ class LoginScreen extends StatelessWidget {
                       backgroundColor: Colors.white,
                       side: const BorderSide(color: Colors.grey, width: 0.5)),
                   child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.21,
+                    width: MediaQuery.of(context).size.width * 0.22,
                     height: MediaQuery.of(context).size.height * 0.05,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
