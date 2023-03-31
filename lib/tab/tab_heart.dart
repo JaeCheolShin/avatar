@@ -1,3 +1,4 @@
+import 'package:avatar3_flutter/Heart/0.dart';
 import 'package:flutter/material.dart';
 
 import '../Heart/heart_1.dart';
@@ -9,7 +10,6 @@ import '../Heart/heart_6.dart';
 import '../Heart/heart_7.dart';
 import '../Heart/heart_8.dart';
 import '../Heart/heart_9.dart';
-import '../avatar/zxc.dart';
 
 class TabHeart extends StatefulWidget {
   const TabHeart({super.key});
@@ -219,7 +219,7 @@ class _TabHeartState extends State<TabHeart> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const aa()),
+                        MaterialPageRoute(builder: (context) => const zxc()),
                       );
                     },
                     child: Container(

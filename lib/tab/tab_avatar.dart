@@ -10,7 +10,7 @@ class TabAvatar extends StatefulWidget {
 }
 
 class _TabAvatarState extends State<TabAvatar> {
-  bool _isChecked = false;
+  bool _isChecked = false; //스위치의 온오프 상태
   @override
   Widget build(BuildContext context) {
     return Scaffold(

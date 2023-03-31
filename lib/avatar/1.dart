@@ -15,7 +15,6 @@ class fd extends StatelessWidget {
           appBar: AppBar(
             title: const Text('Menu Example2'),
             centerTitle: true,
-            
             elevation: 0.0,
             actions: <Widget>[
               IconButton(
