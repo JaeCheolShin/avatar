@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
                     Image.asset('assets/images/logo.png',
                         width: 50, height: 50),
                     const Text(
-                      'AVATAR로 시작하기',
+                      'TAARA로 시작하기',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 17,

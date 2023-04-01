@@ -19,7 +19,7 @@ class _zxcState extends State<zxc> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
-        onPressed: () {},
+        onPressed: () {}  ,
         child: const Icon(
           Icons.add,
           color: Colors.white,
@@ -46,7 +46,7 @@ class _zxcState extends State<zxc> {
           )
         ],
       ),
-      body: SafeArea(
+      body: Container(
         child: SlidableBar(
           size: 60,
           slidableController: controller,

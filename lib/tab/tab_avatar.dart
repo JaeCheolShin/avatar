@@ -27,10 +27,10 @@ class _TabAvatarState extends State<TabAvatar> {
         elevation: 1,
         backgroundColor: Colors.white,
         title: const Text(
-          '홈',
+          'TAARA',
           style: TextStyle(color: Colors.black, fontSize: 20),
         ),
-        centerTitle: true,
+        centerTitle: true, //앱바 글씨 가운데 정렬
         actions: <Widget>[
           Switch(
             value: _isChecked,
@@ -43,7 +43,7 @@ class _TabAvatarState extends State<TabAvatar> {
           )
         ],
       ),
-      body: SafeArea(
+      body: SizedBox(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
