@@ -19,7 +19,7 @@ class _zxcState extends State<zxc> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
-        onPressed: () {}  ,
+        onPressed: () {},
         child: const Icon(
           Icons.add,
           color: Colors.white,
@@ -52,24 +52,109 @@ class _zxcState extends State<zxc> {
           slidableController: controller,
           side: Side.right, //위치
           clicker: Container(
-            color: Colors.white,
+            color: Colors.black,
             width: 10,
             height: 30,
           ),
           barChildren: [
-            const SizedBox(height: 30),
-            Image.asset('assets/images/hair 4.png'),
+            const SizedBox(height: 50),
+            Draggable<String>(
+              // Data is the value this Draggable stores.
+              data: '1',
+              feedback: SizedBox(
+                height: 40.0,
+                width: 40.0,
+                child: Center(
+                  child: Image.asset('assets/images/hair 2.png'),
+                ),
+              ),
+              child: SizedBox(
+                height: 40.0,
+                width: 40.0,
+                child: Center(
+                  child: Image.asset('assets/images/hair 2.png'),
+                ),
+              ),
+            ),
             const SizedBox(height: 20),
-            Image.asset('assets/images/outer 1.png'),
+            Draggable<String>(
+              // Data is the value this Draggable stores.
+              data: '2',
+              feedback: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/top 1.png'),
+                ),
+              ),
+              child: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/top 1.png'),
+                ),
+              ),
+            ),
             const SizedBox(height: 20),
-            Image.asset('assets/images/top 1.png'),
+            Draggable<String>(
+              // Data is the value this Draggable stores.
+              data: '3',
+              feedback: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/outer 1.png'),
+                ),
+              ),
+              child: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/outer 1.png'),
+                ),
+              ),
+            ),
             const SizedBox(height: 20),
-            Image.asset('assets/images/bottom 1.png'),
+            Draggable<String>(
+              // Data is the value this Draggable stores.
+              data: '4',
+              feedback: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/bottom 1.png'),
+                ),
+              ),
+              child: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/bottom 1.png'),
+                ),
+              ),
+            ),
             const SizedBox(height: 20),
-            Image.asset('assets/images/shoes 1.png'),
+            Draggable<String>(
+              // Data is the value this Draggable stores.
+              data: '5',
+              feedback: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/shoes 1.png'),
+                ),
+              ),
+              child: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/shoes 1.png'),
+                ),
+              ),
+            ),
           ],
           child: Container(
-            color: Colors.grey.shade200,
+            color: Colors.white,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

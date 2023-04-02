@@ -1,71 +1,86 @@
 import 'package:flutter/material.dart';
 
-class Heart8 extends StatefulWidget {
-  const Heart8({Key? key}) : super(key: key);
+// MyPage
+class Heart8 extends StatelessWidget {
+  const Heart8({super.key});
 
-  @override
-  _HeartGridviewState createState() => _HeartGridviewState();
-}
-
-class _HeartGridviewState extends State<Heart8> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.black,
-        title: const Text('찜한 코디'),
-      ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                const SizedBox(
-                  width: 85,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('내 아바타'),
-                ),
-                const SizedBox(
-                  width: 100,
-                ),
-                ElevatedButton(onPressed: () {}, child: const Text('등록')),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Center(
-              child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.circular(50), //모서리를 둥글게
-                      border: Border.all(color: Colors.transparent, width: 3)),
-                  width: 400,
-                  height: 500,
-                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    height: 500,
-                    width: 400,
-                    fit: BoxFit.contain,
-                  )),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
-              "(코디 이름을 적어주세요)",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
-            ),
-          ],
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Scaffold.of(context).openDrawer();
+          },
+          backgroundColor: Colors.redAccent,
+          elevation: 0,
+          child: const Icon(
+            Icons.add,
+            color: Colors.white,
+            size: 29,
+          ),
         ),
-      ),
-    );
+        endDrawer: Drawer(
+          //오른쪽
+          child: Column(children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 100.0),
+              child: Draggable(
+                //This function should close the drawer
+                onDragStarted: () {
+                  Navigator.pop(context);
+                },
+                feedback: Container(
+                  color: Colors.green,
+                  width: 250,
+                  height: 100,
+                ),
+                childWhenDragging: Container(
+                  color: Colors.grey,
+                  width: 250,
+                  height: 100,
+                ),
+                child: Container(
+                  color: Colors.red,
+                  width: 250,
+                  height: 100,
+                ),
+              ),
+            ),
+          ]),
+        ),
+        appBar: AppBar(
+          title: const Text('Appbar icon menu'),
+          centerTitle: true, // 중앙 정렬
+          elevation: 0.0,
+        ),
+        drawer: Drawer(
+          //왼쪽
+          child: Column(children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 100.0),
+              child: Draggable(
+                //This function should close the drawer
+                onDragStarted: () {
+                  Navigator.pop(context);
+                },
+                feedback: Container(
+                  color: Colors.green,
+                  width: 250,
+                  height: 100,
+                ),
+                childWhenDragging: Container(
+                  color: Colors.grey,
+                  width: 250,
+                  height: 100,
+                ),
+                child: Container(
+                  color: Colors.red,
+                  width: 250,
+                  height: 100,
+                ),
+              ),
+            ),
+          ]),
+        ));
   }
 }
