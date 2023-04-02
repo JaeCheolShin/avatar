@@ -116,15 +116,15 @@ class _zxcState extends State<zxc> {
               // Data is the value this Draggable stores.
               data: '1',
               feedback: SizedBox(
-                height: 40.0,
-                width: 40.0,
+                height: 70.0,
+                width: 70.0,
                 child: Center(
                   child: Image.asset('assets/images/hair 2.png'),
                 ),
               ),
               child: SizedBox(
-                height: 40.0,
-                width: 40.0,
+                height: 70.0,
+                width: 70.0,
                 child: Center(
                   child: Image.asset('assets/images/hair 2.png'),
                 ),
