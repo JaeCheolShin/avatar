@@ -241,6 +241,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.6"
+  drag_and_drop_gridview:
+    dependency: "direct main"
+    description:
+      name: drag_and_drop_gridview
+      sha256: "41186c42a2c8595009c1d2de50ed98a88a8e33ff1076d58d07e95487354af06c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.8"
   encrypt:
     dependency: transitive
     description:
@@ -1048,6 +1056,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.7"
+  simple_speed_dial:
+    dependency: "direct main"
+    description:
+      name: simple_speed_dial
+      sha256: b8322649ac3a6ab1ed1153e005efe90d48e6cb5b2b4e264ca0997cf1e88006fa
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.7"
   sky_engine:
     dependency: transitive
     description: flutter
