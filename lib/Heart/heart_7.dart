@@ -11,61 +11,32 @@ class _HeartGridviewState extends State<Heart7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.black,
-        title: const Text('찜한 코디'),
-      ),
-      body: SafeArea(
+        body: Container(
+      child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                const SizedBox(
-                  width: 85,
+            Draggable<String>(
+              // Data is the value this Draggable stores.
+              data: 'red',
+              feedback: SizedBox(
+                height: 120.0,
+                width: 120.0,
+                child: Center(
+                  child: Image.asset('assets/images/logo.png'),
                 ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('내 아바타'),
+              ),
+              child: SizedBox(
+                height: 120.0,
+                width: 120.0,
+                child: Center(
+                  child: Image.asset('assets/images/logo.png'),
                 ),
-                const SizedBox(
-                  width: 100,
-                ),
-                ElevatedButton(onPressed: () {}, child: const Text('등록')),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Center(
-              child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.circular(50), //모서리를 둥글게
-                      border: Border.all(color: Colors.transparent, width: 3)),
-                  width: 400,
-                  height: 500,
-                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    height: 500,
-                    width: 400,
-                    fit: BoxFit.contain,
-                  )),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
-              "(코디 이름을 적어주세요)",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+              ),
             ),
           ],
         ),
       ),
-    );
+    ));
   }
 }
