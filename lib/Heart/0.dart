@@ -105,9 +105,9 @@ class _zxcState extends State<zxc> {
           slidableController: controller,
           side: Side.right, //위치
           clicker: Container(
-            color: Colors.black,
-            width: 30,
-            height: 30,
+            color: Colors.grey,
+            width: 10,
+            height: 70,
           ),
           barChildren: [
             const SizedBox(height: 50),
@@ -119,14 +119,14 @@ class _zxcState extends State<zxc> {
                 height: 70.0,
                 width: 70.0,
                 child: Center(
-                  child: Image.asset('assets/images/hair 2.png'),
+                  child: Image.asset('assets/images/hair 10.png'),
                 ),
               ),
               child: SizedBox(
                 height: 70.0,
                 width: 70.0,
                 child: Center(
-                  child: Image.asset('assets/images/hair 2.png'),
+                  child: Image.asset('assets/images/hair 10.png'),
                 ),
               ),
             ),
@@ -139,14 +139,14 @@ class _zxcState extends State<zxc> {
                 height: 70.0,
                 width: 70.0,
                 child: Center(
-                  child: Image.asset('assets/images/top 1.png'),
+                  child: Image.asset('assets/images/top 10.png'),
                 ),
               ),
               child: SizedBox(
                 height: 70.0,
                 width: 70.0,
                 child: Center(
-                  child: Image.asset('assets/images/top 1.png'),
+                  child: Image.asset('assets/images/top 10.png'),
                 ),
               ),
             ),
@@ -159,14 +159,14 @@ class _zxcState extends State<zxc> {
                 height: 70.0,
                 width: 70.0,
                 child: Center(
-                  child: Image.asset('assets/images/outer 1.png'),
+                  child: Image.asset('assets/images/outer 3.png'),
                 ),
               ),
               child: SizedBox(
                 height: 70.0,
                 width: 70.0,
                 child: Center(
-                  child: Image.asset('assets/images/outer 1.png'),
+                  child: Image.asset('assets/images/outer 3.png'),
                 ),
               ),
             ),
@@ -179,14 +179,14 @@ class _zxcState extends State<zxc> {
                 height: 70.0,
                 width: 70.0,
                 child: Center(
-                  child: Image.asset('assets/images/bottom 1.png'),
+                  child: Image.asset('assets/images/bottom 10.png'),
                 ),
               ),
               child: SizedBox(
                 height: 70.0,
                 width: 70.0,
                 child: Center(
-                  child: Image.asset('assets/images/bottom 1.png'),
+                  child: Image.asset('assets/images/bottom 10.png'),
                 ),
               ),
             ),
@@ -198,7 +198,7 @@ class _zxcState extends State<zxc> {
                 height: 70.0,
                 width: 70.0,
                 child: Center(
-                  child: Image.asset('assets/images/shoes 1.png'),
+                  child: Image.asset('assets/images/shoes 4.png'),
                 ),
               ),
               childWhenDragging: Container(),
@@ -206,7 +206,7 @@ class _zxcState extends State<zxc> {
                 height: 70.0,
                 width: 70.0,
                 child: Center(
-                  child: Image.asset('assets/images/shoes 1.png'),
+                  child: Image.asset('assets/images/shoes 4.png'),
                 ),
               ),
             ),
@@ -219,7 +219,7 @@ class _zxcState extends State<zxc> {
                 Center(
                   child: SizedBox(
                     child: Image.asset(
-                      'assets/images/avatar removebg.png',
+                      'assets/images/body.png',
                       width: 400,
                       height: 500,
                     ),
