@@ -25,6 +25,7 @@ class _TabHeartState extends State<TabHeart> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          elevation: 1,
           backgroundColor: Colors.white,
           title: const Padding(
             padding: EdgeInsets.all(0),
@@ -170,7 +171,7 @@ class _TabHeartState extends State<TabHeart> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
-                    'assets/images/logo.png',
+                    'assets/images/7.png',
                     height: 90,
                     width: 80,
                   )),
@@ -188,7 +189,7 @@ class _TabHeartState extends State<TabHeart> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
-                    'assets/images/logo.png',
+                    'assets/images/8.png',
                     height: 90,
                     width: 80,
                   )),
@@ -206,7 +207,7 @@ class _TabHeartState extends State<TabHeart> {
                   height: 100,
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Image.asset(
-                    'assets/images/logo.png',
+                    'assets/images/9.png',
                     height: 90,
                     width: 80,
                   )),
@@ -227,11 +228,11 @@ class _TabHeartState extends State<TabHeart> {
                     color: Colors.grey.shade300,
                     width: 100,
                     height: 100,
-                    margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                    margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                     child: Image.asset(
-                      'assets/images/logo.png',
-                      height: 90,
-                      width: 80,
+                      'assets/images/10.png',
+                      width: 100,
+                      height: 100,
                     )),
               ),
             ),

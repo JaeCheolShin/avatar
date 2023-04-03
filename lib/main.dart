@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => CartProvider()),
       ],
       child: GetMaterialApp(
-        title: 'AVATAR', //이 앱의 주제 title
+        title: 'TAARA', //이 앱의 주제 title
         routes: {
           //루트 지정하는곳
           '/index': (context) => const IndexScreen(),

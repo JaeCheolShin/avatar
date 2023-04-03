@@ -220,7 +220,7 @@ class _GridviewState extends State<OuterScreen> {
                     ],
                   )),
             ),
-            /*  GestureDetector(
+            GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
@@ -236,15 +236,66 @@ class _GridviewState extends State<OuterScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'assets/images/logo.png',
+                        'assets/images/outer 15.png',
                         height: 80,
                         width: 80,
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-                      /*  const Text(
-                        '신발',
+                    ],
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 90,
+                  height: 90,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/outer 16.png',
+                        height: 80,
+                        width: 80,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                    ],
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 90,
+                  height: 90,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/outer 9.png',
+                        fit: BoxFit.contain,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      /* const Text(
+                        '하의',
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 20,
@@ -269,15 +320,14 @@ class _GridviewState extends State<OuterScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'assets/images/logo.png',
-                        height: 80,
-                        width: 80,
+                        'assets/images/outer 10.png',
+                        fit: BoxFit.contain,
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-                      /*  const Text(
-                        '신발',
+                      /* const Text(
+                        '하의',
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 20,
@@ -285,7 +335,7 @@ class _GridviewState extends State<OuterScreen> {
                       )*/
                     ],
                   )),
-            ),*/
+            ),
           ],
         ),
       ),

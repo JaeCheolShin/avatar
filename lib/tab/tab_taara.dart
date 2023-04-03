@@ -5,6 +5,7 @@ import 'package:slidable_bar/slidable_bar.dart';
 
 import '../avatar/makeavatar.dart';
 
+//Tab부분은 각 영역의 메인 페이지.
 class TabTaara extends StatefulWidget {
   const TabTaara({super.key});
 
