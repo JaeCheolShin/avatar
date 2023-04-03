@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/splash', //처음 시작되는 곳 지정
         debugShowCheckedModeBanner: false, //앱의 디버그표시
-        darkTheme: ThemeData.light(), //dark로 바꾸면 다크모드 활성화
+        darkTheme: ThemeData.light(), //dark로 바꾸면 다크모드 활성화 (불안정함)
       ),
     );
   }
