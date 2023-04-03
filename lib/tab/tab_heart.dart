@@ -1,4 +1,5 @@
 import 'package:avatar3_flutter/Heart/0.dart';
+import 'package:avatar3_flutter/Heart/heart_6.dart';
 import 'package:flutter/material.dart';
 
 import '../Heart/00.dart';
@@ -147,7 +148,7 @@ class _TabHeartState extends State<TabHeart> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const mn()),
+                        MaterialPageRoute(builder: (context) => const Heart6()),
                       );
                     },
                     child: Container(
