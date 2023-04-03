@@ -5,14 +5,14 @@ import 'package:slidable_bar/slidable_bar.dart';
 
 import '../avatar/makeavatar.dart';
 
-class TabAvatar extends StatefulWidget {
-  const TabAvatar({super.key});
+class TabTaara extends StatefulWidget {
+  const TabTaara({super.key});
 
   @override
-  _TabAvatarState createState() => _TabAvatarState();
+  _TabTaaraState createState() => _TabTaaraState();
 }
 
-class _TabAvatarState extends State<TabAvatar> {
+class _TabTaaraState extends State<TabTaara> {
   final SlidableBarController controller =
       SlidableBarController(initialStatus: true);
   bool _isChecked = false;
@@ -86,7 +86,7 @@ class _TabAvatarState extends State<TabAvatar> {
         elevation: 1,
         backgroundColor: Colors.white,
         title: const Text(
-          '테스트 페이지',
+          'TAARA',
           style: TextStyle(color: Colors.black, fontSize: 20),
         ),
         centerTitle: true,
@@ -109,7 +109,7 @@ class _TabAvatarState extends State<TabAvatar> {
           side: Side.right, //위치
           clicker: Container(
             color: Colors.grey,
-            width: 10,
+            width: 20,
             height: 70,
           ),
           barChildren: [

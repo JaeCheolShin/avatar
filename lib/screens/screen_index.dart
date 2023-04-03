@@ -12,12 +12,12 @@ class IndexScreen extends StatefulWidget {
 }
 
 class _IndexScreenState extends State<IndexScreen> {
-  var _currentTab = TabItem.avatar;
+  var _currentTab = TabItem.taara;
 
   final _navigatorKeys = {
     TabItem.search: GlobalKey<NavigatorState>(),
     TabItem.closet: GlobalKey<NavigatorState>(),
-    TabItem.avatar: GlobalKey<NavigatorState>(),
+    TabItem.taara: GlobalKey<NavigatorState>(),
     TabItem.heart: GlobalKey<NavigatorState>(),
     TabItem.mypage: GlobalKey<NavigatorState>(),
   };
@@ -40,9 +40,9 @@ class _IndexScreenState extends State<IndexScreen> {
 
         if (isFirstRouteInCurrentTab) {
           // 메인 화면이 아닌 경우
-          if (_currentTab != TabItem.avatar) {
+          if (_currentTab != TabItem.taara) {
             // 메인 화면으로 이동
-            _selectTab(TabItem.avatar);
+            _selectTab(TabItem.taara);
             // 앱 종료 방지
             return false;
           }
@@ -56,7 +56,7 @@ class _IndexScreenState extends State<IndexScreen> {
           children: <Widget>[
             _buildOffstageNavigator(TabItem.search),
             _buildOffstageNavigator(TabItem.closet),
-            _buildOffstageNavigator(TabItem.avatar),
+            _buildOffstageNavigator(TabItem.taara),
             _buildOffstageNavigator(TabItem.heart),
             _buildOffstageNavigator(TabItem.mypage),
           ],

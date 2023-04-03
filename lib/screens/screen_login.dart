@@ -1,7 +1,8 @@
 import 'package:avatar3_flutter/screens/screen_index.dart';
-import 'package:avatar3_flutter/login_page/login_avatar.dart';
 import 'package:avatar3_flutter/screens/screen_onboarding.dart';
 import 'package:flutter/material.dart';
+
+import '../login_Page/login_taara.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class LoginScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (_) =>
-                            const loginavatar())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
+                            const logintaara())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
               },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(

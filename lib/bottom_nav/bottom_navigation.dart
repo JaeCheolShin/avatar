@@ -25,7 +25,7 @@ class BottomNavigation extends StatelessWidget {
       items: [
         _buildItem(TabItem.search),
         _buildItem(TabItem.closet),
-        _buildItem(TabItem.avatar),
+        _buildItem(TabItem.taara),
         _buildItem(TabItem.heart),
         _buildItem(TabItem.mypage),
       ],

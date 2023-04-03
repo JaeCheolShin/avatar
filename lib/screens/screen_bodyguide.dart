@@ -1,4 +1,4 @@
-import 'package:avatar3_flutter/tab/tab_avatar.dart';
+import 'package:avatar3_flutter/tab/tab_taara.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -123,7 +123,7 @@ class _BodyGuideViewScreenState extends State<BodyGuideView> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (_) =>
-                                            const TabAvatar())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
+                                             TabTaara())); //이부분을 수정하면 된다 어느 화면으로 넘어갈지
                               },
                               style: ElevatedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
