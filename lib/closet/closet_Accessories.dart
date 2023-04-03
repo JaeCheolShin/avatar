@@ -32,18 +32,11 @@ class _GridviewState extends State<AccessoriesScreen> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      /* Image.asset(
-                        'assets/images/hair 1.png',
+                    children: [
+                      Image.asset(
+                        'assets/images/hat 1.png',
                         fit: BoxFit.contain,
-                      ),*/
-                      Text(
-                        '옷 1',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      )
+                      ),
                     ],
                   )),
             ),
@@ -61,20 +54,10 @@ class _GridviewState extends State<AccessoriesScreen> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      /* Image.asset(
-                        'assets/images/hair 2.png',
+                    children: [
+                      Image.asset(
+                        'assets/images/hat 2.png',
                         fit: BoxFit.contain,
-                      ),*/
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        '옷 2',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
                       ),
                     ],
                   )),
@@ -93,21 +76,11 @@ class _GridviewState extends State<AccessoriesScreen> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      /* Image.asset(
-                        'assets/images/hair 3.png',
+                    children: [
+                      Image.asset(
+                        'assets/images/hat 3.png',
                         fit: BoxFit.contain,
-                      ), */
-                      SizedBox(
-                        height: 10,
                       ),
-                      Text(
-                        '옷 3',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      )
                     ],
                   )),
             ),
@@ -125,21 +98,11 @@ class _GridviewState extends State<AccessoriesScreen> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      /* Image.asset(
-                        'assets/images/hair 4.png',
+                    children: [
+                      Image.asset(
+                        'assets/images/hat 4.png',
                         fit: BoxFit.contain,
-                      ),*/
-                      SizedBox(
-                        height: 10,
                       ),
-                      Text(
-                        '옷 4',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      )
                     ],
                   )),
             ),
@@ -157,21 +120,11 @@ class _GridviewState extends State<AccessoriesScreen> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      /*Image.asset(
-                        'assets/images/hair 5.png',
+                    children: [
+                      Image.asset(
+                        'assets/images/hat 5.png',
                         fit: BoxFit.contain,
-                      ),*/
-                      SizedBox(
-                        height: 10,
                       ),
-                      Text(
-                        '옷 5',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      )
                     ],
                   )),
             ),
@@ -189,21 +142,11 @@ class _GridviewState extends State<AccessoriesScreen> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      /* Image.asset(
-                        'assets/images/hair 6.png',
+                    children: [
+                      Image.asset(
+                        'assets/images/hat 6.png',
                         fit: BoxFit.contain,
-                      ),*/
-                      SizedBox(
-                        height: 10,
                       ),
-                      Text(
-                        '옷 6',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      )
                     ],
                   )),
             ),
@@ -221,22 +164,11 @@ class _GridviewState extends State<AccessoriesScreen> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      /* Image.asset(
-                        'assets/images/logo.png',
-                        height: 80,
-                        width: 80,
-                      ),*/
-                      SizedBox(
-                        height: 10,
+                    children: [
+                      Image.asset(
+                        'assets/images/hat 7.png',
+                        fit: BoxFit.contain,
                       ),
-                      Text(
-                        '옷 7',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      )
                     ],
                   )),
             ),
@@ -254,22 +186,11 @@ class _GridviewState extends State<AccessoriesScreen> {
                   margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      /* Image.asset(
-                        'assets/images/logo.png',
-                        height: 80,
-                        width: 80,
-                      ),*/
-                      SizedBox(
-                        height: 10,
+                    children: [
+                      Image.asset(
+                        'assets/images/hat 8.png',
+                        fit: BoxFit.contain,
                       ),
-                      Text(
-                        '옷 8',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600),
-                      )
                     ],
                   )),
             ),

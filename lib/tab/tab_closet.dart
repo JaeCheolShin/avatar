@@ -20,6 +20,7 @@ class _GridviewState extends State<TabCloset> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
+            elevation: 1,
             backgroundColor: Colors.white,
             title: const Padding(
               padding: EdgeInsets.all(0),

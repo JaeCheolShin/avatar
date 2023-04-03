@@ -194,6 +194,50 @@ class _GridviewState extends State<BottomScreen> {
                     ],
                   )),
             ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 90,
+                  height: 90,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/bottom 9.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ],
+                  )),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Container()),
+                );
+              },
+              child: Container(
+                  color: Colors.grey.shade400,
+                  width: 90,
+                  height: 90,
+                  margin: const EdgeInsets.fromLTRB(20, 20, 10, 10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/bottom 10.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ],
+                  )),
+            ),
           ])),
       debugShowCheckedModeBanner: false,
     );
