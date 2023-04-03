@@ -3,8 +3,8 @@ import 'package:avatar3_flutter/models/model_login.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class loginavatar extends StatelessWidget {
-  const loginavatar({super.key});
+class logintaara extends StatelessWidget {
+  const logintaara({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class loginavatar extends StatelessWidget {
                 ),
               ),
               const Text(
-                'AVATAR로 시작하기',
+                'TAARA로 시작하기',
                 style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500),
               ),
               const SizedBox(
