@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class GG extends StatefulWidget {
-  const GG({Key? key}) : super(key: key);
+class A extends StatefulWidget {
+  const A({Key? key}) : super(key: key);
 
   @override
-  State<GG> createState() => _GGState();
+  State<A> createState() => _AState();
 }
 
-class _GGState extends State<GG> {
+class _AState extends State<A> {
   // the image that will be displayed in the target
   String? _targetImageUrl;
 
@@ -15,7 +15,7 @@ class _GGState extends State<GG> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('테스트 123'),
+        title: const Text('Kindacode.com'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(25),
@@ -31,23 +31,18 @@ class _GGState extends State<GG> {
                 feedback: Opacity(
                   opacity: 0.4,
                   child: Container(
-                    color: Colors.purple,
+                      color: Colors.purple,
+                      width: 300,
+                      height: 200,
+                      alignment: Alignment.center,
+                      child: Image.asset('assets/images/logo.png')),
+                ),
+                child: Container(
                     width: 300,
                     height: 200,
                     alignment: Alignment.center,
-                    child: Image.asset('assets/images/logo.png')
-                  ),
-                ),
-                child: Container(
-                  width: 300,
-                  height: 200,
-                  alignment: Alignment.center,
-                  color: Colors.purple,
-                  child: Image.network(
-                    'https://www.kindacode.com/wp-content/uploads/2020/11/my-dog.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                    color: Colors.purple,
+                    child: Image.asset('assets/images/logo.png')),
               ),
               const SizedBox(height: 50),
 

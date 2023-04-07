@@ -1,6 +1,8 @@
+import 'package:avatar3_flutter/Heart/0.dart';
 import 'package:flutter/material.dart';
 
-import '../Heart/0.dart';
+import '../Heart/0000.dart';
+import '../Heart/01.dart';
 import '../Heart/heart_1.dart';
 import '../Heart/heart_2.dart';
 import '../Heart/heart_3.dart';
@@ -8,8 +10,6 @@ import '../Heart/heart_4.dart';
 import '../Heart/heart_5.dart';
 import '../Heart/heart_6.dart';
 import '../Heart/heart_7.dart';
-import '../Heart/heart_8.dart';
-import '../Heart/heart_9.dart';
 
 class TabHeart extends StatefulWidget {
   const TabHeart({super.key});
@@ -144,7 +144,7 @@ class _TabHeartState extends State<TabHeart> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Heart6()),
+                  MaterialPageRoute(builder: (context) => const GG()),
                 );
               },
               child: Container(
@@ -180,7 +180,10 @@ class _TabHeartState extends State<TabHeart> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Heart8()),
+                  MaterialPageRoute(
+                      builder: (context) => const HH(
+                            title: 'drag',
+                          )),
                 );
               },
               child: Container(
@@ -198,7 +201,7 @@ class _TabHeartState extends State<TabHeart> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Heart9()),
+                  MaterialPageRoute(builder: (context) => const DemoExample()),
                 );
               },
               child: Container(

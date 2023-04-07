@@ -76,6 +76,7 @@ dependencies:
   line_icons: ^2.0.1
   drag_and_drop_gridview: ^1.0.8
   simple_speed_dial: ^0.1.7
+  dotted_border: ^2.0.0+3
 
   
 
