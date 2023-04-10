@@ -1,6 +1,7 @@
 import 'package:avatar3_flutter/Heart/0.dart';
 import 'package:flutter/material.dart';
 
+import '../Heart/000.dart';
 import '../Heart/0000.dart';
 import '../Heart/01.dart';
 import '../Heart/heart_1.dart';
@@ -9,7 +10,6 @@ import '../Heart/heart_3.dart';
 import '../Heart/heart_4.dart';
 import '../Heart/heart_5.dart';
 import '../Heart/heart_6.dart';
-import '../Heart/heart_7.dart';
 
 class TabHeart extends StatefulWidget {
   const TabHeart({super.key});
@@ -19,33 +19,134 @@ class TabHeart extends StatefulWidget {
 }
 
 class _TabHeartState extends State<TabHeart> {
-  bool _isChecked = false;
+  final bool _isChecked = false;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        endDrawer: SizedBox(
+          width: MediaQuery.of(context).size.width * 0.2, //menu 바 폭
+          height: MediaQuery.of(context).size.height * 0.7, //menu 바 높이
+          child: Drawer(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: <Widget>[
+                const SizedBox(height: 50),
+                Draggable<String>(
+                  childWhenDragging: Container(), //드래그했을때 잔상이 남지 않게 함.
+                  // Data is the value this Draggable stores.
+                  data: '1',
+                  feedback: SizedBox(
+                    height: 70.0,
+                    width: 70.0,
+                    child: Center(
+                      child: Image.asset('assets/images/hair 10.png'),
+                    ),
+                  ),
+                  child: SizedBox(
+                    height: 70.0,
+                    width: 70.0,
+                    child: Center(
+                      child: Image.asset('assets/images/hair 10.png'),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Draggable<String>(
+                  childWhenDragging: Container(),
+                  // Data is the value this Draggable stores.
+                  data: '2',
+                  feedback: SizedBox(
+                    height: 70.0,
+                    width: 70.0,
+                    child: Center(
+                      child: Image.asset('assets/images/top 10.png'),
+                    ),
+                  ),
+                  child: SizedBox(
+                    height: 70.0,
+                    width: 70.0,
+                    child: Center(
+                      child: Image.asset('assets/images/top 10.png'),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Draggable<String>(
+                  childWhenDragging: Container(),
+                  // Data is the value this Draggable stores.
+                  data: '3',
+                  feedback: SizedBox(
+                    height: 70.0,
+                    width: 70.0,
+                    child: Center(
+                      child: Image.asset('assets/images/outer 3.png'),
+                    ),
+                  ),
+                  child: SizedBox(
+                    height: 70.0,
+                    width: 70.0,
+                    child: Center(
+                      child: Image.asset('assets/images/outer 3.png'),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Draggable<String>(
+                  childWhenDragging: Container(),
+                  // Data is the value this Draggable stores.
+                  data: '4',
+                  feedback: SizedBox(
+                    height: 70.0,
+                    width: 70.0,
+                    child: Center(
+                      child: Image.asset('assets/images/bottom 10.png'),
+                    ),
+                  ),
+                  child: SizedBox(
+                    height: 70.0,
+                    width: 70.0,
+                    child: Center(
+                      child: Image.asset('assets/images/bottom 10.png'),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Draggable<String>(
+                  // Data is the value this Draggable stores.
+                  data: '5',
+                  feedback: SizedBox(
+                    height: 70.0,
+                    width: 70.0,
+                    child: Center(
+                      child: Image.asset('assets/images/shoes 4.png'),
+                    ),
+                  ),
+                  childWhenDragging: Container(),
+                  child: SizedBox(
+                    height: 70.0,
+                    width: 70.0,
+                    child: Center(
+                      child: Image.asset('assets/images/shoes 4.png'),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
         appBar: AppBar(
+          iconTheme: const IconThemeData(color: Colors.black), //menu 색상
           elevation: 1,
           backgroundColor: Colors.white,
           title: const Padding(
             padding: EdgeInsets.all(0),
             child: Text(
-              '옷장',
+              '찜',
               style: TextStyle(color: Colors.black, fontSize: 20),
             ),
           ),
           centerTitle: true,
-          actions: <Widget>[
-            Switch(
-              value: _isChecked,
-              onChanged: (value) {
-                setState(() {
-                  _isChecked = value;
-                });
-              },
-              activeColor: Colors.black,
-            )
-          ],
         ),
         body: GridView.count(
           crossAxisCount: 2,
@@ -162,7 +263,7 @@ class _TabHeartState extends State<TabHeart> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Heart7()),
+                  MaterialPageRoute(builder: (context) => const NN()),
                 );
               },
               child: Container(
