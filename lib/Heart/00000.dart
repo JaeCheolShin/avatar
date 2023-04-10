@@ -1,77 +1,100 @@
-import 'package:flutter/material.dart';
-
-class A extends StatefulWidget {
-  const A({Key? key}) : super(key: key);
-
-  @override
-  State<A> createState() => _AState();
-}
-
-class _AState extends State<A> {
-  // the image that will be displayed in the target
-  String? _targetImageUrl;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Kindacode.com'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(25),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              /// Draggable
-              Draggable<String>(
-                data:
-                    "https://www.kindacode.com/wp-content/uploads/2020/11/my-dog.jpg",
-                // The widget to show under the pointer when a drag is under way
-                feedback: Opacity(
-                  opacity: 0.4,
-                  child: Container(
-                      color: Colors.purple,
-                      width: 300,
-                      height: 200,
-                      alignment: Alignment.center,
-                      child: Image.asset('assets/images/logo.png')),
+/*const SizedBox(height: 50),
+            Draggable<String>(
+              childWhenDragging: Container(), //드래그했을때 잔상이 남지 않게 함.
+              // Data is the value this Draggable stores.
+              data: '1',
+              feedback: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/hair 10.png'),
                 ),
-                child: Container(
-                    width: 300,
-                    height: 200,
-                    alignment: Alignment.center,
-                    color: Colors.purple,
-                    child: Image.asset('assets/images/logo.png')),
               ),
-              const SizedBox(height: 50),
-
-              /// Target
-              DragTarget<String>(
-                onAccept: (value) {
-                  setState(() {
-                    _targetImageUrl = value;
-                  });
-                },
-                builder: (_, candidateData, rejectedData) {
-                  return Container(
-                    width: 300,
-                    height: 200,
-                    color: Colors.amber,
-                    alignment: Alignment.center,
-                    child: _targetImageUrl != null
-                        ? Image.network(
-                            _targetImageUrl!,
-                            fit: BoxFit.cover,
-                          )
-                        : Container(),
-                  );
-                },
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+              child: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/hair 10.png'),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Draggable<String>(
+              childWhenDragging: Container(),
+              // Data is the value this Draggable stores.
+              data: '2',
+              feedback: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/top 10.png'),
+                ),
+              ),
+              child: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/top 10.png'),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Draggable<String>(
+              childWhenDragging: Container(),
+              // Data is the value this Draggable stores.
+              data: '3',
+              feedback: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/outer 3.png'),
+                ),
+              ),
+              child: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/outer 3.png'),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Draggable<String>(
+              childWhenDragging: Container(),
+              // Data is the value this Draggable stores.
+              data: '4',
+              feedback: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/bottom 10.png'),
+                ),
+              ),
+              child: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/bottom 10.png'),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Draggable<String>(
+              // Data is the value this Draggable stores.
+              data: '5',
+              feedback: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/shoes 4.png'),
+                ),
+              ),
+              childWhenDragging: Container(),
+              child: SizedBox(
+                height: 70.0,
+                width: 70.0,
+                child: Center(
+                  child: Image.asset('assets/images/shoes 4.png'),
+                ),
+              ),
+            ),*/
